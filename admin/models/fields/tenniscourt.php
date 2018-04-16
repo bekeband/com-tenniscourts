@@ -13,18 +13,18 @@ defined('_JEXEC') or die('Restricted access');
 JFormHelper::loadFieldClass('list');
 
 /**
- * HelloWorld Form Field class for the HelloWorld component
+ * HelloWorld Form Field class for the Tenniscourt component
  *
  * @since  0.0.1
  */
-class JFormFieldTenniscourt extends JFormFieldList
+class JFormFieldTennisCourt extends JFormFieldList
 {
     /**
      * The field type.
      *
      * @var         string
      */
-    protected $type = 'Tenniscourts';
+    protected $type = 'TennisCourt';
     
     /**
      * Method to get a list of options for a list input.
