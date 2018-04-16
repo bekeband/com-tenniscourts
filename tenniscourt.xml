@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component"
+           version="3.2.0"
+           method="upgrade">
+
+	<name>Tenniscourt!</name>
+	<!-- The following elements are optional and free of formatting constraints -->
+	<creationDate>April 2018</creationDate>
+	<author>Beke András</author>
+	<authorEmail>beke.andras.mkolc@gmail.com</authorEmail>
+	<authorUrl>http://www.bekeband.hu</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<!--  The version string is recorded in the components table -->
+	<version>0.0.3</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>Tenniscourt component for aministration of tennis courts.</description>
+
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.tenniscourts.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.tenniscourts.sql</file>
+		</sql>
+	</uninstall>
+
+	<update> <!-- Runs on update; New in 2.5 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<!-- Site Main File Copy Section -->
+	<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /site/ in the package -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>tenniscourt.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+	</files>
+
+		<languages folder="site/language">
+			<language tag="en-GB">en-GB/en-GB.com_tenniscourt.ini</language>
+			<language tag="hu-HU">hu-HU/hu-HU.com_tenniscourt.ini</language>
+		</languages>		
+
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu link='index.php?option=com_tenniscourt'>Tenniscourt!</menu>
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+				to copy FROM in the package to install therefore files copied
+				in this section are copied from /admin/ in the package -->
+		<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>tenniscourt.php</filename>
+			<!-- SQL files section -->
+			<folder>sql</folder>
+		</files>
+		
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB/en-GB.com_tenniscourt.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_tenniscourt.sys.ini</language>
+			<language tag="hu-HU">hu-HU/hu-HU.com_tenniscourt.ini</language>
+			<language tag="hu-HU">hu-HU/hu-HU.com_tenniscourt.sys.ini</language>
+		</languages>		
+		
+	</administration>
+
+
+
+
+</extension>
