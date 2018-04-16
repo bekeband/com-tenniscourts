@@ -1,21 +1,18 @@
 <?php
 /**
- * @package     Joomla.Administrator
- * @subpackage  com_helloworld
- *
- * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @package     bekeband
+ * @subpackage  com_tenniscourt
  */
 
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Tenniscourt Model
+ * TennisCourt Model
  *
  * @since  0.0.1
  */
-class TenniscourtModelTenniscourt extends JModelItem
+class TennisCourtModelTennisCourt extends JModelItem
 {
     /**
      * @var array messages
@@ -33,7 +30,7 @@ class TenniscourtModelTenniscourt extends JModelItem
      *
      * @since   1.6
      */
-    public function getTable($type = 'Tenniscourt', $prefix = 'TenniscourtTable', $config = array())
+    public function getTable($type = 'TennisCourt', $prefix = 'TennisCourtTable', $config = array())
     {
         return JTable::getInstance($type, $prefix, $config);
     }

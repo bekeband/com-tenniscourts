@@ -23,7 +23,7 @@ class TenniscourtViewTenniscourt extends JViewLegacy
     function display($tpl = null)
     {
         // Assign data to the view
-        $this->msg = 'Tenniscourt function display($tpl = null)';
+        $this->msg = '// Assign data to the view';
         
         // Display the view
         parent::display($tpl);
