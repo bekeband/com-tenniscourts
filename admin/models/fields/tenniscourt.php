@@ -35,7 +35,7 @@ class JFormFieldTennisCourt extends JFormFieldList
     {
         $db    = JFactory::getDBO();
         $query = $db->getQuery(true);
-        $query->select('ID, POS X, POS Y, TITLE, FEATURES');
+        $query->select('ID, POSX, POSY, TITLE, FEATURES');
         $query->from('TENNIS_COURTS');
         $db->setQuery((string) $query);
         $messages = $db->loadObjectList();
