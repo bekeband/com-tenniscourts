@@ -16,14 +16,19 @@ class TenniscourtViewTenniscourt extends JViewLegacy
     /**
      * Display the Tenniscourt view
      *
-     * @param   string  $tpl  The name of the template file to parse; automatically searches through the template paths.
+     * @param   string  $tpl  The name of the template file to parse; automatically searches 
+     * through the template paths.
      *
      * @return  void
      */
     function display($tpl = null)
     {
         // Assign data to the view
-        $this->msg = '// Assign data to the view';
+        $this->msg = 'Message from function display($tpl = null)';
+        
+        $user = JFactory::getUser();
+        
+        
         
         // Display the view
         parent::display($tpl);

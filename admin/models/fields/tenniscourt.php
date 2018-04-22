@@ -45,7 +45,8 @@ class JFormFieldTennisCourt extends JFormFieldList
         {
             foreach ($messages as $message)
             {
-                $options[] = JHtml::_('select.option', $message->ID, $message->TITLE);
+//                $options[] = JHtml::_('select.option', $message->ID, $message->TITLE);
+                $options[] = JHtml::_('select.option', $message->TITLE);
             }
         }
         

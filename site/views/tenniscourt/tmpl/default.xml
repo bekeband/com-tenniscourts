@@ -11,7 +11,7 @@
 			<field
 					name="id"
 					type="tenniscourt"
-					label="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_LABEL"
+					label="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_LABEL" 
 					description="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_DESC"
 					/>
 		</fieldset>
