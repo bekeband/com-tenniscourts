@@ -28,27 +28,18 @@ class TenniscourtViewTenniscourt extends JViewLegacy
         
         $user = JFactory::getUser();
         
-        var_dump
+//        var_dump($user);
         
-        // Get a db connection.
-        $db = JFactory::getDbo();
-        
-        // Create a new query object.
-        $query = $db->getQuery(true);
-        
-        // Select all records from the user profile table where key begins with "custom.".
-        // Order it by the ordering field.
-        $query->select($db->quoteName(array('user_id', 'profile_key', 'profile_value', 'ordering')));
-        $query->from($db->quoteName('#__TENNISCOURTS'));
-        $query->where($db->quoteName('profile_key') . ' LIKE '. $db->quote('\'custom.%\''));
-        $query->order('ordering ASC');
-        
-        // Reset the query using our newly populated query object.
+        $db =& JFactory::getDBO();
+        $query = "SELECT FEATURES FROM '#__TENNIS_COURTS'";
         $db->setQuery($query);
+        $results = $db->query();
+/*        while($row = mysqli_fetch_array($results)){
+            $alpha = $row['alpha'];
+            $beta = $row['beta'];
+        }*/
         
-        // Load the results as a list of stdClass objects (see later for more options on retrieving data).
-        $results = $db->loadObjectList();
-        
+        var_dump($results);
         // Display the view
         parent::display($tpl);
     }
