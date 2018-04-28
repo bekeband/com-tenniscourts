@@ -6,6 +6,7 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
+
 /**
  * HTML View class for the Tenniscourt Component
  *
@@ -26,20 +27,23 @@ class TenniscourtViewTenniscourt extends JViewLegacy
         // Assign data to the view
         $this->msg = 'Message from function display($tpl = null)';
         
-        $user = JFactory::getUser();
-        
-//        var_dump($user);
+//        $user = JFactory::getUser();
+
         
         $db =& JFactory::getDBO();
-        $query = "SELECT FEATURES FROM '#__TENNIS_COURTS'";
-        $db->setQuery($query);
-        $results = $db->query();
-/*        while($row = mysqli_fetch_array($results)){
-            $alpha = $row['alpha'];
-            $beta = $row['beta'];
-        }*/
         
-        var_dump($results);
+        
+        $tct = new TableCourts($db);
+
+        var_dump($tct);
+        
+        $query = "SELECT FEATURES FROM `#__TENNIS_COURTS` WHERE 1";
+
+        $db->setQuery($query);
+
+        $row = $db->loadRowList();
+        print_r($row);
+        
         // Display the view
         parent::display($tpl);
     }
