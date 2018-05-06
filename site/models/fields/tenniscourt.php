@@ -26,11 +26,37 @@ class JFormFieldTennisCourt extends JFormFieldList
      */
     protected $type = 'TennisCourt';
     
+    protected function getCourtsList()
+    {
+        $db    = JFactory::getDBO();
+        $query = $db->getQuery(true);
+        $query->select('TITLE');
+        $query->from('#__TENNIS_COURTS');
+        $db->setQuery((string) $query);
+        $messages = $db->loadRowList();
+        /*        $options  = array();
+        
+        if ($messages)
+        {
+        foreach ($messages as $message)
+        {
+        //$options[] = JHtml::_('select.option', $message->ID, $message->TITLE);
+        //$options[] = JHtml::_('select.option', $message->TITLE);
+        }
+        }
+        
+        $options = array_merge(parent::getOptions(), $options);*/
+        
+        return $messages;
+        
+    }
+    
+    
     /**
      * Method to get a list of options for a list input.
      *
      * @return  array  An array of JHtml options.
-     */
+     
     protected function getOptions()
     {
         $db    = JFactory::getDBO();
@@ -53,5 +79,5 @@ class JFormFieldTennisCourt extends JFormFieldList
         $options = array_merge(parent::getOptions(), $options);
         
         return $options;
-    }
+    }*/
 }

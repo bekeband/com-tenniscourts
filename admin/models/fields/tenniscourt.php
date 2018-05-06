@@ -35,8 +35,8 @@ class JFormFieldTennisCourt extends JFormFieldList
     {
         $db    = JFactory::getDBO();
         $query = $db->getQuery(true);
-        $query->select('NAME, POSX, POSY, TITLE, FEATURES');
-        $query->from('#__TENNIS_COURTS');
+        $query->select('TITLE, FEATURE');
+        $query->from('#__TENNIS_MENU_OPTIONS');
         $db->setQuery((string) $query);
         $messages = $db->loadObjectList();
         $options  = array();
@@ -45,8 +45,7 @@ class JFormFieldTennisCourt extends JFormFieldList
         {
             foreach ($messages as $message)
             {
-//                $options[] = JHtml::_('select.option', $message->ID, $message->TITLE);
-                $options[] = JHtml::_('select.option', $message->TITLE);
+                $options[] = JHtml::_('select.option', $message->FEATURE);
             }
         }
         
