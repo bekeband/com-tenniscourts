@@ -15,18 +15,18 @@ defined('_JEXEC') or die('Restricted Access');
 	<table class="table table-striped table-hover">
 		<thead>
 		<tr>
-			<th width="1%"><?php echo JText::_('COM_HELLOWORLD_NUM'); ?></th>
+			<th width="1%"><?php echo JText::_('COM_TENNISCOURT_NUM'); ?></th>
 			<th width="2%">
 				<?php echo JHtml::_('grid.checkall'); ?>
 			</th>
 			<th width="90%">
-				<?php echo JText::_('COM_HELLOWORLD_HELLOWORLDS_NAME') ;?>
+				<?php echo JText::_('COM_TENNISCOURT_NAME') ;?>
 			</th>
 			<th width="5%">
-				<?php echo JText::_('COM_HELLOWORLD_PUBLISHED'); ?>
+				<?php echo JText::_('COM_TENNISCOURT_PUBLISHED'); ?>
 			</th>
 			<th width="2%">
-				<?php echo JText::_('COM_HELLOWORLD_ID'); ?>
+				<?php echo JText::_('COM_TENNISCOURT_ID'); ?>
 			</th>
 		</tr>
 		</thead>
@@ -52,7 +52,7 @@ defined('_JEXEC') or die('Restricted Access');
 							<?php echo $row->greeting; ?>
 						</td>
 						<td align="center">
-							<?php echo JHtml::_('jgrid.published', $row->published, $i, 'helloworlds.', true, 'cb'); ?>
+							<?php echo JHtml::_('jgrid.published', $row->published, $i, 'tenniscourts.', true, 'cb'); ?>
 						</td>
 						<td align="center">
 							<?php echo $row->id; ?>

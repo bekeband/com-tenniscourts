@@ -45,8 +45,6 @@ class TenniscourtViewTenniscourt extends JViewLegacy
         
 //        $user = JFactory::getUser();
              
-        $db =& JFactory::getDBO();
-               
         // Get a db connection.
         $db = JFactory::getDBO();
         
