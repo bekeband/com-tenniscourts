@@ -42,7 +42,7 @@
 		<filename>tenniscourt.php</filename>
 		<filename>controller.php</filename>
 		<folder>views</folder>
-		<folder>models</folder>
+		<folder>models</folder>		
 	</files>
 
 		<languages folder="site/language">
@@ -52,9 +52,10 @@
 
 
 	<administration>
-		<!-- Administration Menu Section -->
+		<!-- Administration Menu Section
+		<menu link='index.php?option=com_tenniscourt' img="../media/com_tenniscourt/images/Tux-16x16.png">COM_TENNISCOURT_MENU</menu> -->
 		<menu link='index.php?option=com_tenniscourt'>Tenniscourt!</menu>
-		<!-- Administration Main File Copy Section -->
+<!--		 Administration Main File Copy Section -->
 		<!-- Note the folder attribute: This attribute describes the folder
 				to copy FROM in the package to install therefore files copied
 				in this section are copied from /admin/ in the package -->

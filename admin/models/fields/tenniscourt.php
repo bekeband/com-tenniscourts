@@ -24,7 +24,7 @@ class JFormFieldTennisCourt extends JFormFieldList
      *
      * @var         string
      */
-    protected $type = 'TennisCourt';
+    protected $type = 'TennisCourts';
     
     /**
      * Method to get a list of options for a list input.
@@ -40,12 +40,12 @@ class JFormFieldTennisCourt extends JFormFieldList
         $db->setQuery((string) $query);
         $messages = $db->loadObjectList();
         $options  = array();
-        
+        var_dump($messages);
         if ($messages)
         {
             foreach ($messages as $message)
             {
-                $options[] = JHtml::_('select.option', $message->FEATURE);
+                $options[] = JHtml::_('select.option', $message->TITLE);
             }
         }
         

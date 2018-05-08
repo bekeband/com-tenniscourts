@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
-	<layout title="COM_TENNISCOURT_TENNISCOURT_VIEW_LIST_ALL_COURTS">
+	<layout title="COM_TENNISCOURT_TENNISCOURT_VIEW_DEFAULT_TITLE">
 		<message>COM_TENNISCOURT_TENNISCOURT_VIEW_LIST_ALL_COURTS_DESC</message>
 	</layout>
 	<fields
 			name="request"
-			addfieldpath="/administrator/components/com_tenniscourt/models/fields"
+			addfieldpath="/administrator/components/com_tenniscourts/models/fields"
 			>
 		<fieldset name="request">
 			<field
 					name="id"
-					type="tenniscourt"
-					label="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_LABEL" 
+					type="HelloWorld"
+					label="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_LABEL"
+					description="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_DESC"
+					/>
+			<field
+					name="TITLE"
+					type="TennisCourts"
+					label="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_LABEL"
 					description="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_DESC"
 					/>
 		</fieldset>

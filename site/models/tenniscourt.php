@@ -2,17 +2,18 @@
 /**
  * @package     bekeband
  * @subpackage  com_tenniscourt
+ * A php file that represents the model itself
  */
 
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * TennisCourt Model
+ * TennisCourts Model
  *
  * @since  0.0.1
  */
-class TennisCourtModelTennisCourt extends JModelItem
+class TennisCourtsModelTennisCourt extends JModelItem
 {
     /**
      * @var array messages
