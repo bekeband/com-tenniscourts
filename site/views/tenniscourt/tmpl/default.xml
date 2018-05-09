@@ -10,13 +10,13 @@
 		<fieldset name="request">
 			<field
 					name="id"
-					type="HelloWorld"
+					type="TennisCourt"
 					label="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_LABEL"
 					description="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_DESC"
 					/>
 			<field
 					name="TITLE"
-					type="TennisCourts"
+					type="TennisCourt"
 					label="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_LABEL"
 					description="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_DESC"
 					/>

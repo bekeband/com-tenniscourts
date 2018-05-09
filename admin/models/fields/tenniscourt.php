@@ -24,7 +24,7 @@ class JFormFieldTennisCourt extends JFormFieldList
      *
      * @var         string
      */
-    protected $type = 'TennisCourts';
+    protected $type = 'TennisCourt';
     
     /**
      * Method to get a list of options for a list input.
