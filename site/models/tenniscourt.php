@@ -54,16 +54,17 @@ class TennisCourtsModelTennisCourt extends JModelItem
         {
             // Request the selected id
             $jinput = JFactory::getApplication()->input;
+
             $id     = $jinput->get('id', 1, 'INT');
-            
-            // Get a TableTenniscourt instance
+
+            // Get a TableHelloWorld instance
             $table = $this->getTable();
             
             // Load the message
             $table->load($id);
             
             // Assign the message
-            $this->messages[$id] = $table->greeting;
+            $this->messages[$id] = $table->title;
         }
         
         return $this->messages[$id];

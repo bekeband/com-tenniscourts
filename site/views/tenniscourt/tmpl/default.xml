@@ -14,12 +14,6 @@
 					label="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_LABEL"
 					description="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_DESC"
 					/>
-			<field
-					name="TITLE"
-					type="TennisCourt"
-					label="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_LABEL"
-					description="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_DESC"
-					/>
 		</fieldset>
 	</fields>
 </metadata>

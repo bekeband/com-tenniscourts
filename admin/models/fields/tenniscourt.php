@@ -40,7 +40,7 @@ class JFormFieldTennisCourt extends JFormFieldList
         $db->setQuery((string) $query);
         $messages = $db->loadObjectList();
         $options  = array();
-        var_dump($messages);
+
         if ($messages)
         {
             foreach ($messages as $message)

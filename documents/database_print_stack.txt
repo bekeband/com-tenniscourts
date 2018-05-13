@@ -1,0 +1,37 @@
+
+/home/bekeband/PHPWorkspace/JOOMLA =...
+#0 JFormFieldHelloWorld->getOptions() 
+called at 
+[.../libraries/joomla/form/fields/list.php:58] #1 JFormFieldList->getInput() 
+called at 
+[.../libraries/src/Form/FormField.php:968] #2 Joomla\CMS\Form\FormField->renderField(Array ([class] => ,[rel] => )) 
+called at 
+[.../libraries/src/Form/Form.php:693] #3 Joomla\CMS\Form\Form->renderFieldset(request) 
+called at 
+[.../administrator/components/com_menus/views/item/tmpl/edit.php:142] #4 include(.../administrator/components/com_menus/views/item/tmpl/edit.php) 
+called at 
+[.../libraries/src/MVC/View/HtmlView.php:695] #5 Joomla\CMS\MVC\View\HtmlView->loadTemplate() 
+called at 
+[.../libraries/src/MVC/View/HtmlView.php:230] #6 Joomla\CMS\MVC\View\HtmlView->display() 
+called at 
+[.../administrator/components/com_menus/views/item/view.html.php:90] #7 MenusViewItem->display() 
+called at 
+[.../libraries/src/MVC/Controller/BaseController.php:672] #8 Joomla\CMS\MVC\Controller\BaseController->display() 
+called at 
+[.../administrator/components/com_menus/controller.php:75] #9 MenusController->display() 
+called at 
+[.../libraries/src/MVC/Controller/BaseController.php:710] #10 Joomla\CMS\MVC\Controller\BaseController->execute() 
+called at 
+[.../administrator/components/com_menus/menus.php:18] #11 require_once(.../administrator/components/com_menus/menus.php) 
+called at 
+[.../libraries/src/Component/ComponentHelper.php:382] #12 Joomla\CMS\Component\ComponentHelper::executeComponent(.../administrator/components/com_menus/menus.php) 
+called at 
+[.../libraries/src/Component/ComponentHelper.php:357] #13 Joomla\CMS\Component\ComponentHelper::renderComponent(com_menus) 
+called at 
+[.../libraries/src/Application/AdministratorApplication.php:101] #14 Joomla\CMS\Application\AdministratorApplication->dispatch() 
+called at 
+[.../libraries/src/Application/AdministratorApplication.php:159] #15 Joomla\CMS\Application\AdministratorApplication->doExecute() 
+called at 
+[.../libraries/src/Application/CMSApplication.php:204] #16 Joomla\CMS\Application\CMSApplication->execute() 
+called at 
+[.../administrator/index.php:51]
