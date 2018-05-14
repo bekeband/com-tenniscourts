@@ -27,7 +27,7 @@ class TennisCourtsViewTenniscourt extends JViewLegacy
     {
         // Assign data to the view
         $this->msg = $this->get('Msg');
-        
+
         // Check for errors.
         if (count($errors = $this->get('Errors')))
         {

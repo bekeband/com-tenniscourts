@@ -11,7 +11,7 @@ defined('_JEXEC') or die('Restricted access');
 /**
  * TennisCourts Model
  *
- * @since  0.0.1
+ * @since  0.0.1 TennisCourtsModelTennisCourt
  */
 class TennisCourtsModelTennisCourt extends JModelItem
 {
@@ -59,12 +59,13 @@ class TennisCourtsModelTennisCourt extends JModelItem
 
             // Get a TableHelloWorld instance
             $table = $this->getTable();
-            
+
             // Load the message
             $table->load($id);
-            
+
             // Assign the message
-            $this->messages[$id] = $table->title;
+            $this->messages[$id] = $table->id;
+
         }
         
         return $this->messages[$id];
