@@ -1,10 +1,8 @@
 <?php
 /**
- * @package     Joomla.Administrator
- * @subpackage  com_helloworld
+ * @package     TennisCourt
+ * @subpackage  com_tenniscourt
  *
- * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 // No direct access to this file
@@ -39,35 +37,55 @@ class TenniscourtModelTenniscourt extends JModelItem
     }
     
     /**
-     * Get the message
+     * Method to get the record form.
      *
-     * @param   integer  $id  Greeting Id
+     * @param   array    $data      Data for the form.
+     * @param   boolean  $loadData  True if the form is to load its own data (default case), false if not.
      *
-     * @return  string        Fetched String from Table for relevant Id
+     * @return  mixed    A JForm object on success, false on failure
+     *
+     * @since   1.6
      */
-    public function getMsg($id = 1)
+    public function getForm($data = array(), $loadData = true)
     {
-        if (!is_array($this->messages))
+        // Get the form.
+        $form = $this->loadForm(
+            'com_tenniscourt.tenniscourt',
+            'tenniscourt',
+            array(
+                'control' => 'jform',
+                'load_data' => $loadData
+            )
+            );
+        
+        if (empty($form))
         {
-            $this->messages = array();
+            return false;
         }
         
-        if (!isset($this->messages[$id]))
+        return $form;
+    }
+    
+    /**
+     * Method to get the data that should be injected in the form.
+     *
+     * @return  mixed  The data for the form.
+     *
+     * @since   1.6
+     */
+    protected function loadFormData()
+    {
+        // Check the session for previously entered form data.
+        $data = JFactory::getApplication()->getUserState(
+            'com_tenniscourt.edit.tenniscourt.data',
+            array()
+            );
+        
+        if (empty($data))
         {
-            // Request the selected id
-            $jinput = JFactory::getApplication()->input;
-            $id     = $jinput->get('id', 1, 'INT');
-            
-            // Get a TableHelloWorld instance
-            $table = $this->getTable();
-            
-            // Load the message
-            $table->load($id);
-            
-            // Assign the message
-            $this->messages[$id] = $table->greeting;
+            $data = $this->getItem();
         }
         
-        return $this->messages[$id];
+        return $data;
     }
 }
