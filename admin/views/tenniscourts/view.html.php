@@ -64,7 +64,7 @@ class TennisCourtViewTennisCourts extends JViewLegacy
 	 */
 	protected function addToolBar()
 	{
-		$title = JText::_('COM_HELLOWORLD_MANAGER_HELLOWORLDS');
+		$title = JText::_('COM_TENNISCOURT_MANAGER_TENNISCOURTS');
 
 		if ($this->pagination->total)
 		{
@@ -84,6 +84,6 @@ class TennisCourtViewTennisCourts extends JViewLegacy
 	protected function setDocument() 
 	{
 		$document = JFactory::getDocument();
-		$document->setTitle(JText::_('COM_HELLOWORLD_ADMINISTRATION'));
+		$document->setTitle(JText::_('COM_TENNISCOURT_ADMINISTRATION'));
 	}
 }

@@ -1,32 +1,23 @@
 <?php
 /**
- * @package     bekeband
+ * @package     TennisCourt
  * @subpackage  com_tenniscourt
+ *
  */
 
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
+// Set some global property
+$document = JFactory::getDocument();
+$document->addStyleDeclaration('.icon-tenniscourt {background-image: url(../media/com_tenniscourt/images/tux-16x16.png);}');
 
+// Get an instance of the controller prefixed by TennisCourt
+$controller = JControllerLegacy::getInstance('TennisCourt');
 
+// Perform the Request task
+$input = JFactory::getApplication()->input;
+$controller->execute($input->getCmd('task'));
 
-$user = JFactory::getUser();
-
-
-if ($user->authorise('core.edit', 'com_content'))
-{
-    echo "<p>You may edit all content.</p>";
-}
-else
-{
-    echo "<p>You may not edit all content.</p>";
-}
-
-if ($user->authorise('core.edit.own', 'com_content'))
-{
-    echo "<p>You may edit your own content.</p>";
-}
-else
-{
-    echo "<p>You may not edit your own content.</p>";
-}
+// Redirect if set by the controller
+$controller->redirect();
