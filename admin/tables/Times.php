@@ -5,11 +5,11 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Tenniscourt table class
- *
+ * TennisTimes table class
+ * 
  * @since  0.0.1
  */
-class TableTimes extends JTable
+class TennisTimesTableTennisTimes extends JTable
 {
     /**
      * Constructor

@@ -27,9 +27,12 @@ class TennisCourtModelTennisCourts extends JModelList
 		if (empty($config['filter_fields']))
 		{
 			$config['filter_fields'] = array(
-				'id',
-				'greeting',
-				'published'
+				'NAME',
+				'POSX',
+				'POSY',
+			    'TITLE',
+			    'FEATURES',
+			    'OPEN'
 			);
 		}
 
@@ -49,7 +52,7 @@ class TennisCourtModelTennisCourts extends JModelList
 
 		// Create the base select statement.
 		$query->select('*')
-			  ->from($db->quoteName('#__helloworld'));
+			  ->from($db->quoteName('#__TENNIS_COURTS'));
 
 		// Filter: like / search
 		$search = $this->getState('filter.search');
@@ -57,23 +60,23 @@ class TennisCourtModelTennisCourts extends JModelList
 		if (!empty($search))
 		{
 			$like = $db->quote('%' . $search . '%');
-			$query->where('greeting LIKE ' . $like);
+			$query->where('NAME LIKE ' . $like);
 		}
 
 		// Filter by published state
-		$published = $this->getState('filter.published');
+		$published = $this->getState('filter.opened');
 
-		if (is_numeric($published))
+		if (is_numeric($opened))
 		{
-			$query->where('published = ' . (int) $published);
+			$query->where('OPEN = ' . (int) $opened);
 		}
-		elseif ($published === '')
+		elseif ($opened === '')
 		{
-			$query->where('(published IN (0, 1))');
+			$query->where('(opened IN (0, 1))');
 		}
 
 		// Add the list ordering clause.
-		$orderCol	= $this->state->get('list.ordering', 'greeting');
+		$orderCol	= $this->state->get('list.ordering', 'NAME');
 		$orderDirn 	= $this->state->get('list.direction', 'asc');
 
 		$query->order($db->escape($orderCol) . ' ' . $db->escape($orderDirn));
