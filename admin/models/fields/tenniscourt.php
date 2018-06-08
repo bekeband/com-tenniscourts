@@ -11,7 +11,7 @@ defined('_JEXEC') or die('Restricted access');
 JFormHelper::loadFieldClass('list');
 
 /**
- * HelloWorld Form Field class for the Tenniscourt component
+ * TennisCourt Form Field class for the Tenniscourt component
  *
  * @since  0.0.1
  */
@@ -34,7 +34,7 @@ class JFormFieldTennisCourt extends JFormFieldList
         $db    = JFactory::getDBO();
         $query = $db->getQuery(true);
         $query->select('TITLE, FEATURE');
-        $query->from('#__TENNIS_MENU_OPTIONS');
+        $query->from('#__TENNIS_COURTS');
         $db->setQuery((string) $query);
         $messages = $db->loadObjectList();
         $options  = array();

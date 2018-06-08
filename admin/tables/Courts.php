@@ -18,6 +18,6 @@ class TennisCourtTableTennisCourt extends JTable
      */
     function __construct(&$db)
     {
-        parent::__construct('#__TENNIS_MENU_OPTIONS', 'ID', $db);
+        parent::__construct('#__TENNIS_TIMES', 'ID', $db);
     }
 }
