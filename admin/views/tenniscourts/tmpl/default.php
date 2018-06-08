@@ -33,7 +33,7 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 				<?php echo JHtml::_('grid.checkall'); ?>
 			</th>
 			<th width="90%">
-				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_TENNISCOURTS_NAME', 'greeting', $listDirn, $listOrder); ?>
+				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_TENNISCOURTS_NAME', 'name', $listDirn, $listOrder); ?>
 			</th>
 			<th width="5%">
 				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_PUBLISHED', 'published', $listDirn, $listOrder); ?>
@@ -62,7 +62,7 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 						</td>
 						<td>
 							<a href="<?php echo $link; ?>" title="<?php echo JText::_('COM_TENNISCOURT_EDIT_TENNISCOURT'); ?>">
-								<?php echo $row->greeting; ?>
+								<?php echo $row->name; ?>
 							</a>
 						</td>
 						<td align="center">
