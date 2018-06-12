@@ -1,7 +1,7 @@
 <?php
 /**
  * @package     TennisCourt
- * @subpackage  com_tenniscourt
+ * @subpackage  /home/bekeband/joomla-components/com-tenniscourts
  *
  */
 
@@ -55,9 +55,9 @@ class TennisCourtViewTennisCourts extends JViewLegacy
 		$this->setDocument();
 	}
 
-	/**
+	/**It will be display the admin setting the tenniscourts manager page.
 	 * Add the page title and toolbar.
-	 *
+	 * 
 	 * @return  void
 	 *
 	 * @since   1.6

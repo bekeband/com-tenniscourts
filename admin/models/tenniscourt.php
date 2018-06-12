@@ -9,11 +9,11 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Tenniscourt Model
+ * TennisCourt Model
  *
  * @since  0.0.1
  */
-class TenniscourtModelTenniscourt extends JModelItem
+class TennisCourtModelTennisCourt extends JModelItem
 {
     /**
      * @var array messages
@@ -31,7 +31,7 @@ class TenniscourtModelTenniscourt extends JModelItem
      *
      * @since   1.6
      */
-    public function getTable($type = 'Tenniscourt', $prefix = 'TenniscourtTable', $config = array())
+    public function getTable($type = 'TennisCourt', $prefix = 'TennisCourtTable', $config = array())
     {
         return JTable::getInstance($type, $prefix, $config);
     }

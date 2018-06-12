@@ -48,6 +48,7 @@ class TennisCourtModelTennisCourts extends JModelList
 	{
 		// Initialize variables.
 		$db    = JFactory::getDbo();
+//		$TTable = TennisCourtTableTennisCourt($db);
 		$query = $db->getQuery(true);
 
 		// Create the base select statement.
