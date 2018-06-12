@@ -4,39 +4,39 @@
 DROP TABLE IF EXISTS `#__TENNIS_MENU_OPTIONS`;
 
 CREATE TABLE `#__TENNIS_MENU_OPTIONS` (
-  `TITLE` varchar(30) NOT NULL,
-  `FEATURE` varchar(30) NOT NULL,
-  `ID` varchar(12) NOT NULL
+  `title` varchar(30) NOT NULL,
+  `feature` varchar(30) NOT NULL,
+  `id` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
-INSERT INTO `#__TENNIS_MENU_OPTIONS` (`TITLE`, `FEATURE`, `ID`) VALUES
+INSERT INTO `#__TENNIS_MENU_OPTIONS` (`title`, `feature`, `id`) VALUES
 ('OPTIONS 1 TITLE', 'OPTIONS 1 FEATURE', '1'),
 ('OPTIONS 2 TITLE', 'OPTIONS 2 FEATURE', '2'),
 ('OPTIONS 3 TITLE', 'OPTIONS 3 FEATURE', '3'),
 ('OPTIONS 4 TITLE', 'OPTIONS 4 FEATURE', '4');
 
 ALTER TABLE `#__TENNIS_MENU_OPTIONS`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`id`);
 
 /* -------------------------- TENNIS_TARRIFF TABLE ------------------------------- */
 
 DROP TABLE IF EXISTS `#__TENNIS_TARIFF`;
 
 CREATE TABLE `#__TENNIS_TARIFF` (
-  `ID` varchar(30) NOT NULL,
+  `id` varchar(30) NOT NULL,
   `PR_PER_HOUR` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
-INSERT INTO `#__TENNIS_TARIFF` (`ID`, `PR_PER_HOUR`) VALUES
+INSERT INTO `#__TENNIS_TARIFF` (`id`, `PR_PER_HOUR`) VALUES
 ('BASE', 2000),
 ('BASE_DISCOUNT', 1600),
 ('BASE_INDOOR', 4000),
 ('BASE_INDOOR_DISCOUNT', 3200);
 
 ALTER TABLE `#__TENNIS_TARIFF`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`id`);
 
 /* -------------------------- END TENNIS_TARRIFF TABLE -------------------------------*/
 
@@ -45,23 +45,24 @@ ALTER TABLE `#__TENNIS_TARIFF`
 DROP TABLE IF EXISTS `#__TENNIS_FEATURES`;  
   
 CREATE TABLE `#__TENNIS_FEATURES` (
-  `ID` varchar(20) NOT NULL,
-  `SINGLE_PLAY` tinyint(1) NOT NULL,
-  `DOUBLE_PLAY` tinyint(1) NOT NULL,
-  `PRACTICING` tinyint(1) NOT NULL,
-  `MEDIUM` tinyint(1) NOT NULL,
-  `COMPETITION` tinyint(1) NOT NULL,
-  `PRICE_MULT` double NOT NULL
+  `id` varchar(20) NOT NULL,
+  `single_play` tinyint(1) NOT NULL,
+  `double_play` tinyint(1) NOT NULL,
+  `practicing` tinyint(1) NOT NULL,
+  `medium` tinyint(1) NOT NULL,
+  `competition` tinyint(1) NOT NULL,
+  `price_mult` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `#__TENNIS_FEATURES` (`ID`, `SINGLE_PLAY`, `DOUBLE_PLAY`, `PRACTICING`, `MEDIUM`, `COMPETITION`, `PRICE_MULT`) VALUES
+INSERT INTO `#__TENNIS_FEATURES` (`id`, `single_play`, `double_play`, `practicing`, 
+	`medium`, `competition`, `price_mult`) VALUES
 ('MEDIUM_DOUBLE', 1, 1, 1, 1, 0, 1),
 ('PRACTICE_DOUBLE', 1, 1, 1, 0, 0, 0.9),
 ('PRACTICE_SINGLE', 1, 0, 1, 0, 0, 0.8),
 ('PROFI', 1, 1, 1, 1, 1, 1.2);
 
 ALTER TABLE `#__TENNIS_FEATURES`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`id`);
   
   
 /* -------------------------- END TENNIS_FEATURES TABLE -------------------------------*/
@@ -72,14 +73,15 @@ ALTER TABLE `#__TENNIS_FEATURES`
 DROP TABLE IF EXISTS `#__TENNIS_COURTS`; 
   
 CREATE TABLE `#__TENNIS_COURTS` (
-  `NAME` varchar(60) NOT NULL,
-  `POSX` int(11) NOT NULL,
-  `POSY` int(11) NOT NULL,
-  `TITLE` varchar(40) CHARACTER SET latin2 COLLATE latin2_hungarian_ci NOT NULL,
-  `FEATURES` varchar(24) NOT NULL
+  `name` varchar(60) NOT NULL,
+  `posx` int(11) NOT NULL,
+  `posy` int(11) NOT NULL,
+  `title` varchar(40) CHARACTER SET latin2 COLLATE latin2_hungarian_ci NOT NULL,
+  `features` varchar(24) NOT NULL,
+  `open` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `#__TENNIS_COURTS` (`NAME`, `POSX`, `POSY`, `TITLE`, `FEATURES`) VALUES
+INSERT INTO `#__TENNIS_COURTS` (`name`, `posx`, `posy`, `title`, `features`) VALUES
 ('11', 1, 1, 'Center court', 'PROFI'),
 ('12', 1, 2, 'Left from center court', 'MEDIUM_DOUBLE'),
 ('13', 1, 3, 'Left behind of the center court', 'PRACTICE_DOUBLE'),
@@ -87,7 +89,7 @@ INSERT INTO `#__TENNIS_COURTS` (`NAME`, `POSX`, `POSY`, `TITLE`, `FEATURES`) VAL
 ('31', 3, 1, 'Only single practice court.', 'PRACTICE_SINGLE');
 
 ALTER TABLE `#__TENNIS_COURTS`
-  ADD PRIMARY KEY (`NAME`);
+  ADD PRIMARY KEY (`name`);
 
 
 /* -------------------------- END TENNIS_COURTS TABLE -------------------------------*/
@@ -97,12 +99,12 @@ ALTER TABLE `#__TENNIS_COURTS`
 DROP TABLE IF EXISTS `#__TENNIS_TIMES`; 
 
 CREATE TABLE `#__TENNIS_TIMES` (
-  `ID` varchar(12) NOT NULL,
+  `id` varchar(12) NOT NULL,
   `BEGIN` time NOT NULL,
   `END` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `#__TENNIS_TIMES` (`ID`, `BEGIN`, `END`) VALUES
+INSERT INTO `#__TENNIS_TIMES` (`id`, `BEGIN`, `END`) VALUES
 ('06-07', '06:00:00', '07:00:00'),
 ('07-08', '07:00:00', '08:00:00'),
 ('08-09', '08:00:00', '09:00:00'),
@@ -121,6 +123,6 @@ INSERT INTO `#__TENNIS_TIMES` (`ID`, `BEGIN`, `END`) VALUES
 ('21-22', '21:00:00', '22:00:00');
 
 ALTER TABLE `#__TENNIS_TIMES`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`id`);
 
 /* -------------------------- END TENNIS_TIMES TABLE -------------------------------*/

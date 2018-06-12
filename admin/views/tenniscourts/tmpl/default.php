@@ -33,11 +33,23 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 			<th width="2%">
 				<?php echo JHtml::_('grid.checkall'); ?>
 			</th>
-			<th width="90%">
+			<th width="10%">
 				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_TENNISCOURTS_NAME', 'name', $listDirn, $listOrder); ?>
 			</th>
 			<th width="5%">
-				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_PUBLISHED', 'open', $listDirn, $listOrder); ?>
+				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_TENNISCOURTS_POSX', 'posx', $listDirn, $listOrder); ?>
+			</th>
+			<th width="5%">
+				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_TENNISCOURTS_POSY', 'posy', $listDirn, $listOrder); ?>
+			</th>
+			<th width="40%">
+				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_TENNISCOURTS_TITLE', 'title', $listDirn, $listOrder); ?>
+			</th>
+			<th width="40%">
+				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_TENNISCOURTS_FEAT', 'features', $listDirn, $listOrder); ?>
+			</th>
+			<th width="5%">
+				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_OPENED', 'open', $listDirn, $listOrder); ?>
 			</th>
 			<th width="2%">
 				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_ID', 'id', $listDirn, $listOrder); ?>

@@ -13,7 +13,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.1
  */
-class TennisCourtModelTennisCourt extends JModelItem
+class TennisCourtModelTennisCourt extends JModelAdmin
 {
     /**
      * @var array messages
