@@ -24,15 +24,16 @@ class TennisCourtModelTennisCourts extends JModelList
 	 */
 	public function __construct($config = array())
 	{
+
 		if (empty($config['filter_fields']))
 		{
 			$config['filter_fields'] = array(
-				'NAME',
-				'POSX',
-				'POSY',
-			    'TITLE',
-			    'FEATURES',
-			    'OPEN'
+				'name',
+				'posx',
+				'posy',
+			    'title',
+			    'features',
+			    'open'
 			);
 		}
 
@@ -46,6 +47,7 @@ class TennisCourtModelTennisCourts extends JModelList
 	 */
 	protected function getListQuery()
 	{
+
 		// Initialize variables.
 		$db    = JFactory::getDbo();
 //		$TTable = TennisCourtTableTennisCourt($db);
@@ -61,23 +63,23 @@ class TennisCourtModelTennisCourts extends JModelList
 		if (!empty($search))
 		{
 			$like = $db->quote('%' . $search . '%');
-			$query->where('NAME LIKE ' . $like);
+			$query->where('name LIKE ' . $like);
 		}
 
 		// Filter by published state
-		$published = $this->getState('filter.opened');
+		$opened = $this->getState('filter.open');
 
 		if (is_numeric($opened))
 		{
-			$query->where('OPEN = ' . (int) $opened);
+			$query->where('open = ' . (int) $opened);
 		}
 		elseif ($opened === '')
 		{
-			$query->where('(opened IN (0, 1))');
+			$query->where('(open IN (0, 1))');
 		}
 
 		// Add the list ordering clause.
-		$orderCol	= $this->state->get('list.ordering', 'NAME');
+		$orderCol	= $this->state->get('list.ordering', 'name');
 		$orderDirn 	= $this->state->get('list.direction', 'asc');
 
 		$query->order($db->escape($orderCol) . ' ' . $db->escape($orderDirn));

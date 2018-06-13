@@ -12,7 +12,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.1
  */
-class HelloWorldControllerHelloWorlds extends JControllerAdmin
+class TennisCourtControllerTennisCourts extends JControllerAdmin
 {
     /**
      * Proxy for getModel.
