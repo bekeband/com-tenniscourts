@@ -13,7 +13,7 @@ JHtml::_('formbehavior.chosen', 'select');
 $listOrder     = $this->escape($this->filter_order);
 $listDirn      = $this->escape($this->filter_order_Dir);
 ?>
-<form action="index.php?option=com_tenniscourt&view=tenniscourts" method="post" id="adminForm" name="adminForm">
+<form action="index.php?option=com_tenniscourt&view=TennisCourts" method="post" id="adminForm" name="adminForm">
 	<div class="row-fluid">
 		<div class="span6">
 			<?php echo JText::_('COM_TENNISCOURT_TENNISCOURTS_FILTER'); ?>
@@ -62,7 +62,7 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 						</td>
 						<td>
 							<a href="<?php echo $link; ?>" title="<?php echo JText::_('COM_TENNISCOURT_EDIT_TENNISCOURT'); ?>">
-								<?php echo $row->name; ?>
+								<?php echo $row->greeting; ?>
 							</a>
 						</td>
 						<td align="center">
