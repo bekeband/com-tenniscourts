@@ -66,23 +66,32 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 		<tbody>
 			<?php if (!empty($this->items)) : ?>
 				<?php foreach ($this->items as $i => $row) :
-					$link = JRoute::_('index.php?option=com_tenniscourt&task=tenniscourt.edit&id=' . $row->id);
+					$link = JRoute::_('index.php?option=com_tenniscourt&task=tenniscourt.edit&name=' . $row->name);
 				?>
 					<tr>
 						<td><?php echo $this->pagination->getRowOffset($i); ?></td>
 						<td>
-							<?php echo JHtml::_('grid.id', $i, $row->id); ?>
+							<?php echo JHtml::_('grid.id', $i, $row->name); ?>
 						</td>
 						<td>
 							<a href="<?php echo $link; ?>" title="<?php echo JText::_('COM_TENNISCOURT_EDIT_TENNISCOURT'); ?>">
-								<?php echo $row->greeting; ?>
+								<?php echo $row->name; ?>
 							</a>
 						</td>
 						<td align="center">
-							<?php echo JHtml::_('jgrid.published', $row->published, $i, 'tenniscourts.', true, 'cb'); ?>
+							<?php echo $row->posx; ?>
 						</td>
 						<td align="center">
-							<?php echo $row->id; ?>
+							<?php echo $row->posy; ?>
+						</td>
+						<td align="center">
+							<?php echo $row->title; ?>
+						</td>
+						<td align="center">
+							<?php echo $row->features; ?>
+						</td>
+						<td align="center">
+							<?php echo JHtml::_('jgrid.published', $row->open, $i, 'tenniscourts.', true, 'cb'); ?>
 						</td>
 					</tr>
 				<?php endforeach; ?>
