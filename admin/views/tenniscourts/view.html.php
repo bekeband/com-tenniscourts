@@ -24,7 +24,7 @@ class TennisCourtViewTennisCourts extends JViewLegacy
 	 */
 	function display($tpl = null)
 	{
-
+        
 		// Get application
 		$app = JFactory::getApplication();
 		$context = "tenniscourt.list.admin.tenniscourt";

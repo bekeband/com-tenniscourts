@@ -29,7 +29,6 @@ class TennisCourtControllerTennisCourts extends JControllerAdmin
         $config = array('ignore_request' => true))
     {
         $model = parent::getModel($name, $prefix, $config);
-        
         return $model;
     }
 }
