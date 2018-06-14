@@ -9,7 +9,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.1
  */
-class TennisCourtTableTennisCourts extends JTable
+class TennisCourtTableTennisCourt extends JTable
 {
     /**
      * Constructor

@@ -8,8 +8,8 @@
 		<field
 				name="NAME"
 				type="text"
-				label="COM_TENNISCOURT_TENNISCOURT_GREETING_LABEL"
-				description="COM_TENNISCOURT_TENNISCOURT_GREETING_DESC"
+				label="TENNISCOURT_NAME_FIELD"
+				description="TENNISCOURT_NAME_DESC"
 				size="60"
 				class="inputbox"
 				default=""
@@ -17,8 +17,8 @@
 		<field
 				name="POSX"
 				type="number"
-				label="COM_TENNISCOURT_TENNISCOURT_POSX_LABEL"
-				description="COM_TENNISCOURT_TENNISCOURT_POSX_DESC"
+				label="TENNISCOURT_POSX_FIELD"
+				description="TENNISCOURT_POSX_FIELD_DESC"
 				size="11"
 				class="inputbox"
 				default=""
