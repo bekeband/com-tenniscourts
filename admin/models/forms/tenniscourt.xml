@@ -26,8 +26,8 @@
 		<field
 				name="POSY"
 				type="number"
-				label="COM_TENNISCOURT_TENNISCOURT_POSY_LABEL"
-				description="COM_TENNISCOURT_TENNISCOURT_POSY_DESC"
+				label="TENNISCOURT_POSY_FIELD"
+				description="TENNISCOURT_POSY_FIELD_DESC"
 				size="11"
 				class="inputbox"
 				default=""
@@ -35,8 +35,8 @@
 		<field
 				name="TITLE"
 				type="text"
-				label="COM_TENNISCOURT_TENNISCOURT_TITLE_LABEL"
-				description="COM_TENNISCOURT_TENNISCOURT_TITLE_DESC"
+				label="TENNISCOURT_TITLE_FIELD"
+				description="TENNISCOURT_TITLE_FIELD_DESC"
 				size="40"
 				class="inputbox"
 				default=""
@@ -44,8 +44,8 @@
 		<field
 				name="FEATURES"
 				type="text"
-				label="COM_TENNISCOURT_TENNISCOURT_FEATURES_LABEL"
-				description="COM_TENNISCOURT_TENNISCOURT_FEATURES_DESC"
+				label="TENNISCOURT_FEATURES_FIELD"
+				description="TENNISCOURT_FEATURES_FIELD_DESC"
 				size="24"
 				class="inputbox"
 				default=""
