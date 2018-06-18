@@ -58,18 +58,18 @@
 
 	<administration>
 		<!-- Administration Menu Section -->
-<!--		<menu link="index.php?option=com_tenniscourt" img="../media/com_tenniscourt/images/Tux-16x16.png">Hello Tenniscourt!</menu> 
+<!--		<menu link="index.php?option=com_tenniscourt" img="media/com_tenniscourt/images/Bitmap_editor.png">Hello Tenniscourt!</menu> 
 		<menu link='index.php?option=com_tenniscourt'>Tenniscourt!</menu> -->
-	<menu>Tenniscourt!</menu>
+	<menu link="index.php?option=com_tenniscourt" img="media/com_tenniscourt/images/Bitmap_editor.png">Hello Tenniscourt!</menu>
 	<submenu>
 		<!--
 			Note that all & must be escaped to &amp; for the file to be valid
 			XML and be parsed by the installer
 		-->
-		<menu view="tenniscourts" img="media/com_tenniscourt/images/Tux-16x16.png">TENNISCOURT_COURTS</menu>
-		<menu view="tennisfeatures">TENNISCOURT_FEATURES</menu>
-		<menu view="tennistarrifs">TENNISCOURT_TARRIFS</menu>
-		<menu view="tenniscoach">TENNISCOURT_COACH</menu>
+		<menu view="tenniscourts" img="media/com_tenniscourt/images/Bitmap_editor.png">TENNISCOURT_COURTS</menu>
+		<menu view="tennisfeatures" img="media/com_tenniscourt/images/Brightness.png">TENNISCOURT_FEATURES</menu>
+		<menu view="tennistarrifs" img="media/com_tenniscourt/images/Brush.png">TENNISCOURT_TARRIFS</menu>
+		<menu view="tenniscoach" img="media/com_tenniscourt/images/Camera.png">TENNISCOURT_COACH</menu>
 		<menu view="tennisplayers">TENNISCOURT_PLAYERS</menu>
 	</submenu>
 <!--		 Administration Main File Copy Section -->

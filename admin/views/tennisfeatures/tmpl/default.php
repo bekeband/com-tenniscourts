@@ -14,10 +14,10 @@ $listOrder     = $this->escape($this->filter_order);
 $listDirn      = $this->escape($this->filter_order_Dir);
 
 ?>
-<form action="index.php?option=com_tenniscourt&view=TennisCourts" method="post" id="adminForm" name="adminForm">
+<form action="index.php?option=com_tenniscourt&view=TennisFeatures" method="post" id="adminForm" name="adminForm">
 	<div class="row-fluid">
 		<div class="span6">
-			<?php echo JText::_('COM_TENNISCOURT_TENNISCOURTS_FILTER'); ?>
+			<?php echo JText::_('COM_TENNISFEATURES_TENNISFEATURES_FILTER'); ?>
 			<?php
 				echo JLayoutHelper::render(
 					'joomla.searchtools.default',
