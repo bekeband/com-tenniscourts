@@ -64,17 +64,17 @@ class TennisCourtViewTennisFeatures extends JViewLegacy
 	 */
 	protected function addToolBar()
 	{
-		$title = JText::_('COM_TENNISCOURT_MANAGER_TENNISCOURTS');
+		$title = JText::_('COM_TENNISFEATURE_MANAGER_TENNISFEATURE');
 
 		if ($this->pagination->total)
 		{
 			$title .= "<span style='font-size: 0.5em; vertical-align: middle;'>(" . $this->pagination->total . ")</span>";
 		}
 
-		JToolBarHelper::title($title, 'tenniscourt');
-		JToolBarHelper::addNew('tenniscourt.add');
-		JToolBarHelper::editList('tenniscourt.edit');
-		JToolBarHelper::deleteList('', 'tenniscourts.delete');
+		JToolBarHelper::title($title, 'tennisfeature');
+		JToolBarHelper::addNew('tennisfeature.add');
+		JToolBarHelper::editList('tennisfeature.edit');
+		JToolBarHelper::deleteList('', 'tennisfeature.delete');
 	}
 	/**
 	 * Method to set up the document properties
@@ -84,6 +84,6 @@ class TennisCourtViewTennisFeatures extends JViewLegacy
 	protected function setDocument() 
 	{
 		$document = JFactory::getDocument();
-		$document->setTitle(JText::_('COM_TENNISCOURT_ADMINISTRATION'));
+		$document->setTitle(JText::_('COM_TENNISFEATURE_ADMINISTRATION'));
 	}
 }
