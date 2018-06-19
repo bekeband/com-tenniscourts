@@ -73,11 +73,11 @@ class TennisCourtViewTennisFeature extends JViewLegacy
 
 		if ($isNew)
 		{
-			$title = JText::_('COM_TENNISCOURT_MANAGER_TENNISCOURT_NEW');
+			$title = JText::_('COM_TENNISFEATURE_MANAGER_TENNISFEATURE_NEW');
 		}
 		else
 		{
-			$title = JText::_('COM_TENNISCOURT_MANAGER_TENNISCOURT_EDIT');
+			$title = JText::_('COM_TENNISFEATURE_MANAGER_TENNISFEATURE_EDIT');
 		}
 
 		JToolBarHelper::title($title, 'tennisfeature');

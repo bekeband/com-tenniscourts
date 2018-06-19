@@ -29,30 +29,30 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 	<table class="table table-striped table-hover">
 		<thead>
 		<tr>
-			<th width="1%"><?php echo JText::_('COM_TENNISCOURT_NUM'); ?></th>
+			<th width="1%"><?php echo JText::_('COM_TENNISFEATURES_NUM'); ?></th>
 			<th width="2%">
 				<?php echo JHtml::_('grid.checkall'); ?>
 			</th>
 			<th width="10%">
-				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_TENNISCOURTS_NAME', 'name', $listDirn, $listOrder); ?>
+				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_ID_FIELD', 'id', $listDirn, $listOrder); ?>
 			</th>
 			<th width="5%">
-				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_TENNISCOURTS_POSX', 'posx', $listDirn, $listOrder); ?>
+				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_SINGLE_PLAY_FIELD', 'single_play', $listDirn, $listOrder); ?>
 			</th>
 			<th width="5%">
-				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_TENNISCOURTS_POSY', 'posy', $listDirn, $listOrder); ?>
+				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_DOUBLE_PLAY_FIELD', 'double_play', $listDirn, $listOrder); ?>
 			</th>
 			<th width="40%">
-				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_TENNISCOURTS_TITLE', 'title', $listDirn, $listOrder); ?>
+				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_PRACTICING_FIELD', 'practicing', $listDirn, $listOrder); ?>
 			</th>
 			<th width="40%">
-				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_TENNISCOURTS_FEAT', 'features', $listDirn, $listOrder); ?>
+				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_MEDIUM_FIELD', 'medium', $listDirn, $listOrder); ?>
 			</th>
 			<th width="5%">
-				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_OPENED', 'open', $listDirn, $listOrder); ?>
+				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_COMPETITION_FIELD', 'competition', $listDirn, $listOrder); ?>
 			</th>
 			<th width="2%">
-				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_ID', 'id', $listDirn, $listOrder); ?>
+				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_PRIZEMULT_FIELD', 'prize_mult', $listDirn, $listOrder); ?>
 			</th>
 		</tr>
 		</thead>
@@ -66,7 +66,7 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 		<tbody>
 			<?php if (!empty($this->items)) : ?>
 				<?php foreach ($this->items as $i => $row) :
-					$link = JRoute::_('index.php?option=com_tenniscourt&task=tenniscourt.edit&name=' . $row->name);
+					$link = JRoute::_('index.php?option=com_tenniscourt&task=tennisfeature.edit&name=' . $row->id);
 				?>
 					<tr>
 						<td><?php echo $this->pagination->getRowOffset($i); ?></td>
