@@ -11,18 +11,18 @@ defined('_JEXEC') or die('Restricted access');
 JFormHelper::loadFieldClass('list');
 
 /**
- * TennisFeature Form Field class for the Tenniscourt component
+ * TennisTariff Form Field class for the Tenniscourt component
  *
  * @since  0.0.1
  */
-class JFormFieldTennisFeature extends JFormFieldList
+class JFormFieldTennisTariff extends JFormFieldList
 {
     /**
      * The field type.
      *
      * @var         string
      */
-    protected $type = 'TennisFeature';
+    protected $type = 'TennisTariff';
     
     /**
      * Method to get a list of options for a list input.
@@ -34,7 +34,7 @@ class JFormFieldTennisFeature extends JFormFieldList
         $db    = JFactory::getDBO();
         $query = $db->getQuery(true);
         $query->select('id');
-        $query->from('#__TENNIS_FEATURES');
+        $query->from('#__TENNIS_TARIFF');
         $db->setQuery((string) $query);
         $messages = $db->loadObjectList();
         $options  = array();

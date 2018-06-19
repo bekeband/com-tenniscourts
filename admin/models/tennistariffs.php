@@ -12,7 +12,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.1
  */
-class TennisCourtModelTennisFeatures extends JModelList
+class TennisCourtModelTennisTariffs extends JModelList
 {
 	/**
 	 * Constructor.
@@ -29,12 +29,7 @@ class TennisCourtModelTennisFeatures extends JModelList
 		{
 			$config['filter_fields'] = array(			    
 			    `id`,
-			    `single_play`,
-			    `double_play`,
-			    `practicing`,
-			    `medium`,
-			    `competition`,
-			    `price_mult`
+			    `pr_per_hour`
 			);
 		}
 
@@ -56,7 +51,7 @@ class TennisCourtModelTennisFeatures extends JModelList
 
 		// Create the base select statement.
 		$query->select('*')
-			  ->from($db->quoteName('#__TENNIS_FEATURES'));
+			  ->from($db->quoteName('#__TENNIS_TARIFF'));
 
 		// Filter: like / search
 		$search = $this->getState('filter.search');
@@ -68,16 +63,16 @@ class TennisCourtModelTennisFeatures extends JModelList
 		}
 
 		// Filter by published state
-		$single_play = $this->getState('filter.single_play');
+//		$single_play = $this->getState('filter.single_play');
 
-		if (is_numeric($single_play))
+/*		if (is_numeric($single_play))
 		{
 			$query->where('single_play = ' . (int) $single_play);
 		}
 		elseif ($single_play === '')
 		{
 			$query->where('(single_play IN (0, 1))');
-		}
+		}*/
 
 		// Add the list ordering clause.
 		$orderCol	= $this->state->get('list.ordering', 'id');

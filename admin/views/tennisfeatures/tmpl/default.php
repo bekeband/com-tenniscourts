@@ -71,27 +71,33 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 					<tr>
 						<td><?php echo $this->pagination->getRowOffset($i); ?></td>
 						<td>
-							<?php echo JHtml::_('grid.id', $i, $row->name); ?>
+							<?php echo JHtml::_('grid.id', $i, $row->id); ?>
 						</td>
 						<td>
-							<a href="<?php echo $link; ?>" title="<?php echo JText::_('COM_TENNISCOURT_EDIT_TENNISCOURT'); ?>">
-								<?php echo $row->name; ?>
+							<a href="<?php echo $link; ?>" title="<?php echo JText::_('COM_TENNISFEATURES_EDIT_TENNISFEATURES'); ?>">
+								<?php echo $row->id; ?>
 							</a>
 						</td>
 						<td align="center">
-							<?php echo $row->posx; ?>
+							<?php echo $row->id; ?>
 						</td>
 						<td align="center">
-							<?php echo $row->posy; ?>
+							<?php echo $row->single_play; ?>
 						</td>
 						<td align="center">
-							<?php echo $row->title; ?>
+							<?php echo $row->double_play; ?>
 						</td>
 						<td align="center">
-							<?php echo $row->features; ?>
+							<?php echo $row->practicing; ?>
 						</td>
 						<td align="center">
-							<?php echo JHtml::_('jgrid.published', $row->open, $i, 'tenniscourts.', true, 'cb'); ?>
+							<?php echo $row->medium; ?>
+						</td>
+						<td align="center">
+							<?php echo $row->competition; ?>
+						</td>
+						<td align="center">
+							<?php echo JHtml::_('jgrid.published', $row->price_mult, $i, 'tenniscourts.', true, 'cb'); ?>
 						</td>
 					</tr>
 				<?php endforeach; ?>

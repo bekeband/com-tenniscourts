@@ -13,7 +13,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.1
  */
-class TennisCourtViewTennisFeature extends JViewLegacy
+class TennisCourtViewTennisTariff extends JViewLegacy
 {
 	/**
 	 * View form
@@ -23,7 +23,7 @@ class TennisCourtViewTennisFeature extends JViewLegacy
 	protected $form = null;
 
 	/**
-	 * Display the TennisFeature view
+	 * Display the TennisTariff view
 	 *
 	 * @param   string  $tpl  The name of the template file to parse; automatically searches through the template paths.
 	 *
@@ -73,17 +73,17 @@ class TennisCourtViewTennisFeature extends JViewLegacy
 
 		if ($isNew)
 		{
-			$title = JText::_('COM_TENNISFEATURE_MANAGER_TENNISFEATURE_NEW');
+			$title = JText::_('COM_TENNISCOURT_MANAGER_TENNISCOURT_NEW');
 		}
 		else
 		{
-			$title = JText::_('COM_TENNISFEATURE_MANAGER_TENNISFEATURE_EDIT');
+			$title = JText::_('COM_TENNISCOURT_MANAGER_TENNISCOURT_EDIT');
 		}
 
-		JToolBarHelper::title($title, 'tennisfeature');
-		JToolBarHelper::save('tennisfeature.save');
+		JToolBarHelper::title($title, 'tenniscourt');
+		JToolBarHelper::save('tenniscourt.save');
 		JToolBarHelper::cancel(
-			'tennisfeature.cancel',
+			'tenniscourt.cancel',
 			$isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE'
 		);
 	}
