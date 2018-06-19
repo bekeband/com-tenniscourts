@@ -10,7 +10,7 @@ defined('_JEXEC') or die('Restricted access');
 
 // Set some global property
 $document = JFactory::getDocument();
-$document->addStyleDeclaration('.icon-tenniscourt {background-image: url(../media/com_tenniscourt/images/tux-16x16.png);}');
+$document->addStyleDeclaration('.icon-tenniscourt {background-image: url(../media/com_tenniscourt/images/Camera.png);}');
 
 // Get an instance of the controller prefixed by TennisCourt
 $controller = JControllerLegacy::getInstance('TennisCourt');
