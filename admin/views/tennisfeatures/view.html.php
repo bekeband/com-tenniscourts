@@ -27,6 +27,7 @@ class TennisCourtViewTennisFeatures extends JViewLegacy
         
 		// Get application
 		$app = JFactory::getApplication();
+		
 		$context = "tenniscourt.list.admin.tenniscourt";
 		// Get data from the model
 		$this->items			= $this->get('Items');
@@ -36,7 +37,7 @@ class TennisCourtViewTennisFeatures extends JViewLegacy
 		$this->filter_order_Dir = $app->getUserStateFromRequest($context.'filter_order_Dir', 'filter_order_Dir', 'asc', 'cmd');
 		$this->filterForm    	= $this->get('FilterForm');
 		$this->activeFilters 	= $this->get('ActiveFilters');
-
+        
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
 		{

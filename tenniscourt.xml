@@ -69,7 +69,7 @@
 		-->
 		<menu view="tenniscourts" img="../media/com_tenniscourt/images/Brush.png">TENNISCOURT_COURTS</menu>
 		<menu view="tennisfeatures" img="../media/com_tenniscourt/images/Camera.png">TENNISCOURT_FEATURES</menu>
-		<menu view="tennistarrifs" img="../media/com_tenniscourt/images/Contrast.png">TENNISCOURT_TARRIFS</menu>
+		<menu view="tennistariffs" img="../media/com_tenniscourt/images/Contrast.png">TENNISCOURT_TARRIFS</menu>
 		<menu view="tenniscoach">TENNISCOURT_COACH</menu>
 		<menu view="tennisplayers">TENNISCOURT_PLAYERS</menu>
 	</submenu>
