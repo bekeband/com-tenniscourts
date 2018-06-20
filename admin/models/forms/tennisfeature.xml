@@ -56,14 +56,14 @@
 				default=""
 				/>
        <field name="prize_mult"
-               active="true"
-               type="meter"
-               label="TENNISFEATURE_PRIZEMULT_FIELD"
+               	active="true"
+               	type="number"
+               	label="TENNISFEATURE_PRIZEMULT_FIELD"
 				description="TENNISFEATURE_PRIZEMULT_FIELD_DESC"
-               max="2"
-               min="0.5"
-               step="0.05"
-               default="1"
+               	max="2"
+               	min="0.5"
+               	step="0.05"
+               	default="1.0"
                />		
 	</fieldset>
 </form>
