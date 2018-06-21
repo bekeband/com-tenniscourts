@@ -64,7 +64,7 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 							<?php echo $row->id; ?>
 						</td>
 						<td align="center">
-							<?php echo JHtml::_('jgrid.published', $row->price_mult, $i, 'tennistariffs.', true, 'cb'); ?>
+							<?php echo JHtml::_('jgrid.published', $row->pr_per_hour, $i, 'tennistariffs.', true, 'cb'); ?>
 						</td>
 					</tr>
 				<?php endforeach; ?>
