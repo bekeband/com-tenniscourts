@@ -9,7 +9,7 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * TennisCourt View
+ * TennisTariff View
  *
  * @since  0.0.1
  */
@@ -80,10 +80,10 @@ class TennisCourtViewTennisTariff extends JViewLegacy
 			$title = JText::_('COM_TENNISCOURT_MANAGER_TENNISCOURT_EDIT');
 		}
 
-		JToolBarHelper::title($title, 'tenniscourt');
-		JToolBarHelper::save('tenniscourt.save');
+		JToolBarHelper::title($title, 'tennistariff');
+		JToolBarHelper::save('tennistariff.save');
 		JToolBarHelper::cancel(
-			'tenniscourt.cancel',
+			'tennistariff.cancel',
 			$isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE'
 		);
 	}
@@ -96,7 +96,7 @@ class TennisCourtViewTennisTariff extends JViewLegacy
 	{
 		$isNew = ($this->item->id < 1);
 		$document = JFactory::getDocument();
-		$document->setTitle($isNew ? JText::_('COM_TENNISCOURT_TENNISCOURT_CREATING') :
-                JText::_('COM_TENNISCOURT_TENNISCOURT_EDITING'));
+		$document->setTitle($isNew ? JText::_('COM_TENNISTARIFF_CREATING') :
+                JText::_('COM_TENNISTARIFF_EDITING'));
 	}
 }

@@ -96,7 +96,7 @@ class TennisCourtViewTennisFeature extends JViewLegacy
 	{
 		$isNew = ($this->item->id < 1);
 		$document = JFactory::getDocument();
-		$document->setTitle($isNew ? JText::_('COM_TENNISCOURT_TENNISCOURT_CREATING') :
-                JText::_('COM_TENNISCOURT_TENNISCOURT_EDITING'));
+		$document->setTitle($isNew ? JText::_('COM_TENNISFEATURE_CREATING') :
+                JText::_('COM_TENNISFEATURE_EDITING'));
 	}
 }
