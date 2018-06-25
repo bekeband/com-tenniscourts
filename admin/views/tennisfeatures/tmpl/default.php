@@ -42,10 +42,10 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 			<th width="5%">
 				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_DOUBLE_PLAY_FIELD', 'double_play', $listDirn, $listOrder); ?>
 			</th>
-			<th width="40%">
+			<th width="5%">
 				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_PRACTICING_FIELD', 'practicing', $listDirn, $listOrder); ?>
 			</th>
-			<th width="40%">
+			<th width="5%">
 				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_MEDIUM_FIELD', 'medium', $listDirn, $listOrder); ?>
 			</th>
 			<th width="5%">
@@ -79,22 +79,19 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 							</a>
 						</td>
 						<td align="center">
-							<?php echo $row->id; ?>
+							<?php echo JHtml::_('jgrid.published', $row->single_play, $i, 'tenniscourts.', true, 'cb'); ?>
 						</td>
 						<td align="center">
-							<?php echo $row->single_play; ?>
+							<?php echo JHtml::_('jgrid.published', $row->double_play, $i, 'tenniscourts.', true, 'cb'); ?>
 						</td>
 						<td align="center">
-							<?php echo $row->double_play; ?>
+							<?php echo JHtml::_('jgrid.published', $row->practicing, $i, 'tenniscourts.', true, 'cb'); ?>
 						</td>
 						<td align="center">
-							<?php echo $row->practicing; ?>
+							<?php echo JHtml::_('jgrid.published', $row->medium, $i, 'tenniscourts.', true, 'cb'); ?>
 						</td>
 						<td align="center">
-							<?php echo $row->medium; ?>
-						</td>
-						<td align="center">
-							<?php echo $row->competition; ?>
+							<?php echo JHtml::_('jgrid.published', $row->competition, $i, 'tenniscourts.', true, 'cb'); ?>
 						</td>
 						<td align="center">
 							<?php echo JHtml::_('jgrid.published', $row->price_mult, $i, 'tenniscourts.', true, 'cb'); ?>

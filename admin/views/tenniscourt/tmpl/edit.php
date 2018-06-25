@@ -17,10 +17,12 @@ defined('_JEXEC') or die('Restricted access');
             <div class="row-fluid">
                 <div class="span6">
                     <?php foreach ($this->form->getFieldset() as $field): ?>
+                    	
                         <div class="control-group">
                             <div class="control-label"><?php echo $field->label; ?></div>
                             <div class="controls"><?php echo $field->input; ?></div>
                         </div>
+                        
                     <?php endforeach; ?>
                 </div>
             </div>

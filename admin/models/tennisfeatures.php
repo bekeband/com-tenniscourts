@@ -68,7 +68,7 @@ class TennisCourtModelTennisFeatures extends JModelList
 		}
 
 		// Filter by published state
-		$single_play = $this->getState('filter.single_play');
+/*		$single_play = $this->getState('filter.single_play');
 
 		if (is_numeric($single_play))
 		{
@@ -77,7 +77,7 @@ class TennisCourtModelTennisFeatures extends JModelList
 		elseif ($single_play === '')
 		{
 			$query->where('(single_play IN (0, 1))');
-		}
+		}*/
 
 		// Add the list ordering clause.
 		$orderCol	= $this->state->get('list.ordering', 'id');

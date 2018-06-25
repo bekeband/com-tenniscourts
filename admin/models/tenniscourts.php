@@ -67,7 +67,7 @@ class TennisCourtModelTennisCourts extends JModelList
 		}
 
 		// Filter by published state
-		$opened = $this->getState('filter.open');
+/*		$opened = $this->getState('filter.open');
 
 		if (is_numeric($opened))
 		{
@@ -76,7 +76,7 @@ class TennisCourtModelTennisCourts extends JModelList
 		elseif ($opened === '')
 		{
 			$query->where('(open IN (0, 1))');
-		}
+		}*/
 
 		// Add the list ordering clause.
 		$orderCol	= $this->state->get('list.ordering', 'name');
