@@ -31,7 +31,7 @@ class TennisCourtModelTennisFeature extends JModelAdmin
      *
      * @since   1.6
      */
-    public function getTable($type = 'TennisFeature', $prefix = 'TennisFeaturesTable', $config = array())
+    public function getTable($type = 'TennisFeature', $prefix = 'TennisCourtTable', $config = array())
     {
         return JTable::getInstance($type, $prefix, $config);
     }
@@ -77,7 +77,7 @@ class TennisCourtModelTennisFeature extends JModelAdmin
     {
         // Check the session for previously entered form data.
         $data = JFactory::getApplication()->getUserState(
-            'com_tennisfeature.edit.tennisfeature.data',
+            'com_tenniscourt.edit.tennisfeature.data',
             array()
             );
         

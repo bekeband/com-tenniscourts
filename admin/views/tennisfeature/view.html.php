@@ -34,7 +34,6 @@ class TennisCourtViewTennisFeature extends JViewLegacy
 		// Get the Data
 		$this->form = $this->get('Form');
 		$this->item = $this->get('Item');
-
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
 		{

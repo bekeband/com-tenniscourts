@@ -31,7 +31,7 @@ class TennisCourtModelTennisTariff extends JModelAdmin
      *
      * @since   1.6
      */
-    public function getTable($type = 'TennisTariff', $prefix = 'TennisTariffsTable', $config = array())
+    public function getTable($type = 'TennisTariff', $prefix = 'TennisCourtTable', $config = array())
     {
         return JTable::getInstance($type, $prefix, $config);
     }
@@ -77,7 +77,7 @@ class TennisCourtModelTennisTariff extends JModelAdmin
     {
         // Check the session for previously entered form data.
         $data = JFactory::getApplication()->getUserState(
-            'com_tennistariff.edit.tennistariff.data',
+            'com_tenniscourt.edit.tennistariff.data',
             array()
             );
         
