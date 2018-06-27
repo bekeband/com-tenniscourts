@@ -28,6 +28,7 @@ class TennisCourtModelTennisCourts extends JModelList
 		if (empty($config['filter_fields']))
 		{
 			$config['filter_fields'] = array(
+			    'id',
 				'name',
 				'posx',
 				'posy',

@@ -29,6 +29,7 @@ class TennisCourtModelTennisFeatures extends JModelList
 		{
 			$config['filter_fields'] = array(			    
 			    `id`,
+			    `name`,
 			    `single_play`,
 			    `double_play`,
 			    `practicing`,

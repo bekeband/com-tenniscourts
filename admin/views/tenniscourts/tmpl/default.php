@@ -66,12 +66,12 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 		<tbody>
 			<?php if (!empty($this->items)) : ?>
 				<?php foreach ($this->items as $i => $row) :
-					$link = JRoute::_('index.php?option=com_tenniscourt&task=tenniscourt.edit&name=' . $row->name);
+					$link = JRoute::_('index.php?option=com_tenniscourt&task=tenniscourt.edit&id=' . $row->id);
 				?>
 					<tr>
 						<td><?php echo $this->pagination->getRowOffset($i); ?></td>
 						<td>
-							<?php echo JHtml::_('grid.id', $i, $row->name); ?>
+							<?php echo JHtml::_('grid.id', $i, $row->id); ?>
 						</td>
 						<td>
 							<a href="<?php echo $link; ?>" title="<?php echo JText::_('COM_TENNISCOURT_EDIT_TENNISCOURT'); ?>">

@@ -84,6 +84,7 @@ class TennisCourtModelTennisFeature extends JModelAdmin
         if (empty($data))
         {
             $data = $this->getItem();
+            throw new \InvalidArgumentException(var_dump($data));
         }
         
         return $data;

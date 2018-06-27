@@ -29,6 +29,7 @@ class TennisCourtModelTennisTariffs extends JModelList
 		{
 			$config['filter_fields'] = array(			    
 			    `id`,
+			    `name`,
 			    `pr_per_hour`
 			);
 		}

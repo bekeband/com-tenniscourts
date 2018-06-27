@@ -18,6 +18,6 @@ class TennisCourtTableTennisTariff extends JTable
      */
     function __construct(&$db)
     {
-        parent::__construct('#__TENNIS_TARIFF', 'ID', $db);
+        parent::__construct('#__TENNIS_TARIFF', 'id', $db);
     }
 }
