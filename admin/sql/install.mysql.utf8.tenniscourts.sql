@@ -26,11 +26,11 @@ DROP TABLE IF EXISTS `#__TENNIS_TARIFF`;
 CREATE TABLE `#__TENNIS_TARIFF` (
   `id` varchar(12) NOT NULL,
   `name` varchar(20) NOT NULL,
-  `PR_PER_HOUR` double NOT NULL
+  `pr_per_hour` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
-INSERT INTO `#__TENNIS_TARIFF` (`id`, `name`, `PR_PER_HOUR`) VALUES
+INSERT INTO `#__TENNIS_TARIFF` (`id`, `name`, `pr_per_hour`) VALUES
 (1, 'BASE', 2000),
 (2, 'BASE_DISCOUNT', 1600),
 (3, 'BASE_INDOOR', 4000),

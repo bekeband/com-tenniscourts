@@ -72,6 +72,10 @@ class TennisCourtViewTennisCourts extends JViewLegacy
 		}
 
 		JToolBarHelper::title($title, 'tenniscourt');
+/*		JToolBarHelper::spacer(100);
+		JToolBarHelper::link('www.bekeband.hu', 'BEKEBAND');
+		JToolBarHelper::media_manager('../media/com_tenniscourt/images');
+		JToolBarHelper::spacer(100);*/
 		JToolBarHelper::addNew('tenniscourt.add');
 		JToolBarHelper::editList('tenniscourt.edit');
 		JToolBarHelper::deleteList('', 'tenniscourts.delete');

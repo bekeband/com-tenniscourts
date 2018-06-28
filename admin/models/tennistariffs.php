@@ -33,6 +33,7 @@ class TennisCourtModelTennisTariffs extends JModelList
 			    `pr_per_hour`
 			);
 		}
+		/* $pr_per_hour */
 
 		parent::__construct($config);
 	}

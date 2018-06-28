@@ -34,6 +34,12 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 				<?php echo JHtml::_('grid.checkall'); ?>
 			</th>
 			<th width="2%">
+				<?php echo JHtml::_('grid.sort', 'TENNISTARIFF_ID_FIELD', 'id', $listDirn, $listOrder); ?>
+			</th>					
+			<th width="2%">
+				<?php echo JHtml::_('grid.sort', 'TENNISTARIFF_NAME_FIELD', 'name', $listDirn, $listOrder); ?>
+			</th>		
+			<th width="2%">
 				<?php echo JHtml::_('grid.sort', 'TENNISTARIFF_PR_FIELD', 'prize_mult', $listDirn, $listOrder); ?>
 			</th>
 		</tr>
@@ -61,10 +67,11 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 							</a>
 						</td>
 						<td align="center">
-							<?php echo $row->id; ?>
-						</td>
+							<?php echo $row->name; ?>
+						</td>	
 						<td align="center">
- 							<?php echo JHtml::_('jgrid.published', $row->pr_per_hour, $i, 'tennistariffs.', true, 'cb'); ?>  
+						<?php echo $row->pr_per_hour; ?>
+<!--  							<?php echo JHtml::_('jgrid.published', $row->pr_per_hour, $i, 'tennistariffs.', true, 'text'); ?>  -->  
 						</td>
 					</tr>
 				<?php endforeach; ?>

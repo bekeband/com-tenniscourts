@@ -51,9 +51,6 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 			<th width="5%">
 				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_OPENED', 'open', $listDirn, $listOrder); ?>
 			</th>
-			<th width="2%">
-				<?php echo JHtml::_('grid.sort', 'COM_TENNISCOURT_ID', 'id', $listDirn, $listOrder); ?>
-			</th>
 		</tr>
 		</thead>
 		<tfoot>
@@ -91,7 +88,8 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 							<?php echo $row->features; ?>
 						</td>
 						<td align="center">
-							<?php echo JHtml::_('jgrid.published', $row->open, $i, 'tenniscourts.', true, 'cb'); ?>
+							<?php echo $row->open; ?>
+<!-- 							<?php echo JHtml::_('jgrid.published', $row->open, $i, 'tenniscourts.', true, 'cb'); ?>  -->
 						</td>
 					</tr>
 				<?php endforeach; ?>

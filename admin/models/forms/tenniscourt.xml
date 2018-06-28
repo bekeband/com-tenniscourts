@@ -6,7 +6,7 @@
 				type="hidden"
 				/>
 		<field
-				name="NAME"
+				name="name"
 				type="text"
 				label="TENNISCOURT_NAME_FIELD"
 				description="TENNISCOURT_NAME_DESC"
@@ -15,7 +15,7 @@
 				default=""
 				/>
 		<field
-				name="POSX"
+				name="posx"
 				type="number"
 				label="TENNISCOURT_POSX_FIELD"
 				description="TENNISCOURT_POSX_FIELD_DESC"
@@ -24,7 +24,7 @@
 				default=""
 				/>
 		<field
-				name="POSY"
+				name="posy"
 				type="number"
 				label="TENNISCOURT_POSY_FIELD"
 				description="TENNISCOURT_POSY_FIELD_DESC"
@@ -33,7 +33,7 @@
 				default=""
 				/>
 		<field
-				name="TITLE"
+				name="title"
 				type="text"
 				label="TENNISCOURT_TITLE_FIELD"
 				description="TENNISCOURT_TITLE_FIELD_DESC"
@@ -42,7 +42,7 @@
 				default=""
 				/>
 		<field
-				name="FEATURES"
+				name="features"
 				type="text"
 				label="TENNISCOURT_FEATURES_FIELD"
 				description="TENNISCOURT_FEATURES_FIELD_DESC"
