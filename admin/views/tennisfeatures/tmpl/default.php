@@ -33,8 +33,8 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 			<th width="2%">
 				<?php echo JHtml::_('grid.checkall'); ?>
 			</th>
-			<th width="10%">
-				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_ID_FIELD', 'id', $listDirn, $listOrder); ?>
+			<th width="5%">
+				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_NAME_FIELD', 'name', $listDirn, $listOrder); ?>
 			</th>
 			<th width="5%">
 				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_SINGLE_PLAY_FIELD', 'single_play', $listDirn, $listOrder); ?>
@@ -51,7 +51,7 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 			<th width="5%">
 				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_COMPETITION_FIELD', 'competition', $listDirn, $listOrder); ?>
 			</th>
-			<th width="2%">
+			<th width="5%">
 				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_PRIZEMULT_FIELD', 'prize_mult', $listDirn, $listOrder); ?>
 			</th>
 		</tr>
@@ -66,7 +66,7 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 		<tbody>
 			<?php if (!empty($this->items)) : ?>
 				<?php foreach ($this->items as $i => $row) :
-					$link = JRoute::_('index.php?option=com_tenniscourt&task=tennisfeature.edit&name=' . $row->id);
+					$link = JRoute::_('index.php?option=com_tenniscourt&task=tennisfeature.edit&id=' . $row->id);
 				?>
 					<tr>
 						<td><?php echo $this->pagination->getRowOffset($i); ?></td>
@@ -75,26 +75,33 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 						</td>
 						<td>
 							<a href="<?php echo $link; ?>" title="<?php echo JText::_('COM_TENNISFEATURES_EDIT_TENNISFEATURES'); ?>">
-								<?php echo $row->id; ?>
+								<?php echo $row->name; ?>
 							</a>
 						</td>
 						<td align="center">
-							<?php echo JHtml::_('jgrid.published', $row->single_play, $i, 'tenniscourts.', true, 'cb'); ?>
+						<?php echo $row->single_play; ?>
+<!--							<?php echo JHtml::_('jgrid.published', $row->single_play, $i, 'tenniscourts.', true, 'cb'); ?> -->
 						</td>
 						<td align="center">
-							<?php echo JHtml::_('jgrid.published', $row->double_play, $i, 'tenniscourts.', true, 'cb'); ?>
+						<?php echo $row->double_play; ?>
+<!--							<?php echo JHtml::_('jgrid.published', $row->double_play, $i, 'tenniscourts.', true, 'cb'); ?> -->
 						</td>
 						<td align="center">
-							<?php echo JHtml::_('jgrid.published', $row->practicing, $i, 'tenniscourts.', true, 'cb'); ?>
+						<?php echo $row->medium; ?>
+<!--							<?php echo JHtml::_('jgrid.published', $row->practicing, $i, 'tenniscourts.', true, 'cb'); ?> -->
 						</td>
 						<td align="center">
-							<?php echo JHtml::_('jgrid.published', $row->medium, $i, 'tenniscourts.', true, 'cb'); ?>
+						<?php echo $row->medium; ?>
+<!--							<?php echo JHtml::_('jgrid.published', $row->medium, $i, 'tenniscourts.', true, 'cb'); ?> -->
 						</td>
 						<td align="center">
-							<?php echo JHtml::_('jgrid.published', $row->competition, $i, 'tenniscourts.', true, 'cb'); ?>
+						<?php echo $row->competition; ?>
+<!-- 							<?php echo JHtml::_('jgrid.published', $row->competition, $i, 'tenniscourts.', true, 'cb'); ?> -->
 						</td>
 						<td align="center">
-							<?php echo JHtml::_('jgrid.published', $row->price_mult, $i, 'tenniscourts.', true, 'cb'); ?>
+							<?php echo $row->price_mult; ?>
+<!-- 							<?php echo JHtml::_('jgrid.published', $row->price_mult, $i, 'tenniscourts.', true, 'cb'); ?>  -->
+							
 						</td>
 					</tr>
 				<?php endforeach; ?>

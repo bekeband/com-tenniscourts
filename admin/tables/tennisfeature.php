@@ -18,6 +18,6 @@ class TennisCourtTableTennisFeature extends JTable
      */
     function __construct(&$db)
     {
-        parent::__construct('#__TENNIS_FEATURES', 'ID', $db);
+        parent::__construct('#__TENNIS_FEATURES', 'id', $db);
     }
 }

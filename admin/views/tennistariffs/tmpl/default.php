@@ -48,7 +48,7 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 		<tbody>
 			<?php if (!empty($this->items)) : ?>
 				<?php foreach ($this->items as $i => $row) :
-					$link = JRoute::_('index.php?option=com_tenniscourt&task=tennistariff.edit&name=' . $row->id);
+					$link = JRoute::_('index.php?option=com_tenniscourt&task=tennistariff.edit&id=' . $row->id);
 				?>
 					<tr>
 						<td><?php echo $this->pagination->getRowOffset($i); ?></td>

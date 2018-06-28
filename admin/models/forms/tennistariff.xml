@@ -3,13 +3,18 @@
 	<fieldset>
 		<field
 				name="id"
+				type="hidden"
+				/>
+		<field
+				name="name"
 				type="text"
-				label="TENNISTARIFF_ID_FIELD"
-				description="TENNISTARIFF_ID_DESC"
+				label="TENNISTARIFF_NAME_FIELD"
+				description="TENNISTARIFF_NAME_DESC"
 				size="60"
 				class="inputbox"
 				default=""
 				/>
+				
 		<field
 				name="pr_per_hour"
 				type="text"

@@ -3,9 +3,13 @@
 	<fieldset>
 		<field
 				name="id"
+				type="hidden"
+				/>
+		<field
+				name="name"
 				type="text"
-				label="TENNISFEATURE_ID_FIELD"
-				description="TENNISFEATURE_ID_DESC"
+				label="TENNISFEATURE_NAME_FIELD"
+				description="TENNISFEATURE_NAME_DESC"
 				size="60"
 				class="inputbox"
 				default=""
@@ -55,7 +59,7 @@
 				class="inputbox"
 				default=""
 				/>
-       <field name="prize_mult"
+        <field name="prize_mult"
                	active="true"
                	type="number"
                	label="TENNISFEATURE_PRIZEMULT_FIELD"
