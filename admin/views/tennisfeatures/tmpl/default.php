@@ -87,7 +87,7 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 <!--							<?php echo JHtml::_('jgrid.published', $row->double_play, $i, 'tenniscourts.', true, 'cb'); ?> -->
 						</td>
 						<td align="center">
-						<?php echo $row->medium; ?>
+						<?php echo $row->practicing; ?>
 <!--							<?php echo JHtml::_('jgrid.published', $row->practicing, $i, 'tenniscourts.', true, 'cb'); ?> -->
 						</td>
 						<td align="center">

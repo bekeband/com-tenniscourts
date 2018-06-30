@@ -50,5 +50,14 @@
 				class="inputbox"
 				default=""
 				/>
+		<field
+				name="open"
+				type="checkbox"
+				label="TENNISCOURT_OPEN_FIELD"
+				description="TENNISCOURT_OPEN_FIELD_DESC"
+				size="24"
+				class="checkbox"
+				default=""
+				/>
 	</fieldset>
 </form>

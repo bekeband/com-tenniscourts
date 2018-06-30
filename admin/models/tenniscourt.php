@@ -57,7 +57,7 @@ class TennisCourtModelTennisCourt extends JModelAdmin
                 'load_data' => $loadData
             )
             );
-
+        
         if (empty($form))
         {
             return false;
