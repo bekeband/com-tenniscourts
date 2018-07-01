@@ -20,4 +20,13 @@ class TennisCourtTableTennisCourt extends JTable
     {
         parent::__construct('#__TENNIS_COURTS', 'id', $db);
     }
+    
+    public function bind($array, $ignore = '')
+    {
+        if (!isset($array['open']))
+            $array['open'] = 0 ;
+            
+            return parent::bind($array, $ignore);
+    } 
+    
 }

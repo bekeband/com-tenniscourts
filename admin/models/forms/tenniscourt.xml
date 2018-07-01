@@ -55,7 +55,7 @@
 				type="checkbox"
 				label="TENNISCOURT_OPEN_FIELD"
 				description="TENNISCOURT_OPEN_FIELD_DESC"
-				size="24"
+				size="2"
 				class="checkbox"
 				default=""
 				/>

@@ -52,7 +52,7 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_COMPETITION_FIELD', 'competition', $listDirn, $listOrder); ?>
 			</th>
 			<th width="5%">
-				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_PRIZEMULT_FIELD', 'prize_mult', $listDirn, $listOrder); ?>
+				<?php echo JHtml::_('grid.sort', 'TENNISFEATURE_PRIZEMULT_FIELD', 'price_mult', $listDirn, $listOrder); ?>
 			</th>
 		</tr>
 		</thead>

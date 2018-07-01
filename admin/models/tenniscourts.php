@@ -66,7 +66,20 @@ class TennisCourtModelTennisCourts extends JModelList
 			$like = $db->quote('%' . $search . '%');
 			$query->where('name LIKE ' . $like);
 		}
-
+		
+		// Filter by opened state
+		$opened = $this->getState('filter.open');
+		
+		
+		if (is_numeric($opened))
+		{
+		    $query->where('open = ' . (int) $opened);
+		}
+		elseif ($opened === '')
+		{
+		    $query->where('(open IN (0, 1))');
+		}
+		
 		// Filter by published state
 /*		$opened = $this->getState('filter.open');
 

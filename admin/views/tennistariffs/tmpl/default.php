@@ -32,15 +32,12 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 			<th width="1%"><?php echo JText::_('COM_TENNISTARIFFS_NUM'); ?></th>
 			<th width="2%">
 				<?php echo JHtml::_('grid.checkall'); ?>
-			</th>
-			<th width="2%">
-				<?php echo JHtml::_('grid.sort', 'TENNISTARIFF_ID_FIELD', 'id', $listDirn, $listOrder); ?>
-			</th>					
-			<th width="2%">
+			</th>				
+			<th width="5%">
 				<?php echo JHtml::_('grid.sort', 'TENNISTARIFF_NAME_FIELD', 'name', $listDirn, $listOrder); ?>
 			</th>		
-			<th width="2%">
-				<?php echo JHtml::_('grid.sort', 'TENNISTARIFF_PR_FIELD', 'prize_mult', $listDirn, $listOrder); ?>
+			<th width="5%">
+				<?php echo JHtml::_('grid.sort', 'TENNISTARIFF_PRIZE_FIELD', 'pr_per_hour', $listDirn, $listOrder); ?>
 			</th>
 		</tr>
 		</thead>
@@ -61,13 +58,14 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 						<td>
 							<?php echo JHtml::_('grid.id', $i, $row->id); ?>
 						</td>
-						<td>
-							<a href="<?php echo $link; ?>" title="<?php echo JText::_('COM_TENNISTARIFFS_EDIT_TENNISTARIFFS'); ?>">
+<!--						<td>
+ 							<a href="<?php echo $link; ?>" title="<?php echo JText::_('COM_TENNISTARIFFS_EDIT_TENNISTARIFFS'); ?>">
 								<?php echo $row->id; ?>
-							</a>
-						</td>
+							</a>  
+						</td> -->
 						<td align="center">
-							<?php echo $row->name; ?>
+						<a href="<?php echo $link; ?>" title="<?php echo JText::_('COM_TENNISTARIFFS_EDIT_TENNISTARIFFS'); ?>">
+						<?php echo $row->name; ?> 
 						</td>	
 						<td align="center">
 						<?php echo $row->pr_per_hour; ?>

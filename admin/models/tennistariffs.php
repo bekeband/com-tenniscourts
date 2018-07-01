@@ -64,18 +64,6 @@ class TennisCourtModelTennisTariffs extends JModelList
 			$query->where('id LIKE ' . $like);
 		}
 
-		// Filter by published state
-//		$single_play = $this->getState('filter.single_play');
-
-/*		if (is_numeric($single_play))
-		{
-			$query->where('single_play = ' . (int) $single_play);
-		}
-		elseif ($single_play === '')
-		{
-			$query->where('(single_play IN (0, 1))');
-		}*/
-
 		// Add the list ordering clause.
 		$orderCol	= $this->state->get('list.ordering', 'id');
 		$orderDirn 	= $this->state->get('list.direction', 'asc');
