@@ -9,11 +9,11 @@ defined('_JEXEC') or die('Restricted access');
 
 
 /**
- * HTML View class for the TennisCourts Component
+ * HTML View class for the TennisCourt Component
  *
  * @since  0.0.1
  */
-class TennisCourtsViewTenniscourt extends JViewLegacy
+class TennisCourtViewTennisCourt extends JViewLegacy
 {
     /**
      * Display the TennisCourt

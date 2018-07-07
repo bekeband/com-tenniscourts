@@ -9,8 +9,8 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
-// Get an instance of the controller prefixed by TennisCourts
-$controller = JControllerLegacy::getInstance('TennisCourts');
+// Get an instance of the controller prefixed by TennisCourt
+$controller = JControllerLegacy::getInstance('TennisCourt');
 
 // Perform the Request task
 $input = JFactory::getApplication()->input;

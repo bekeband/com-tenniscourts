@@ -11,9 +11,9 @@ defined('_JEXEC') or die('Restricted access');
 /**
  * TennisCourts Model
  *
- * @since  0.0.1 TennisCourtsModelTennisCourt
+ * @since  0.0.1 TennisCourtModelTennisCourt
  */
-class TennisCourtsModelTennisCourt extends JModelItem
+class TennisCourtModelTennisCourt extends JModelItem
 {
     /**
      * @var array messages
@@ -33,6 +33,7 @@ class TennisCourtsModelTennisCourt extends JModelItem
      */
     public function getTable($type = 'TennisCourt', $prefix = 'TennisCourtTable', $config = array())
     {
+        var_dump($type);
         return JTable::getInstance($type, $prefix, $config);
     }
     
@@ -45,11 +46,12 @@ class TennisCourtsModelTennisCourt extends JModelItem
      */
     public function getMsg($id = 1)
     {
+
         if (!is_array($this->messages))
         {
             $this->messages = array();
         }
-        
+
         if (!isset($this->messages[$id]))
         {
             // Request the selected id
@@ -59,7 +61,6 @@ class TennisCourtsModelTennisCourt extends JModelItem
 
             // Get a TableHelloWorld instance
             $table = $this->getTable();
-
             // Load the message
             $table->load($id);
 

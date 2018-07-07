@@ -13,7 +13,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.1
  */
-class TennisCourtsController extends JControllerLegacy
+class TennisCourtController extends JControllerLegacy
 {
 }
 

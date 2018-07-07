@@ -10,7 +10,7 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted Access');
 ?>
-<form action="index.php?option=com_helloworld&view=helloworlds" method="post" id="adminForm" name="adminForm">
+<form action="index.php?option=com_tenniscourt&view=tenniscourts" method="post" id="adminForm" name="adminForm">
 	<table class="table table-striped table-hover">
 		<thead>
 		<tr>
@@ -37,8 +37,8 @@ defined('_JEXEC') or die('Restricted Access');
 			</tr>
 		</tfoot>
 		<tbody>
-			<?php if (!empty($this->items)) : ?>
-				<?php foreach ($this->items as $i => $row) : ?>
+			<?php /* var_dump($this->items); */ if (!empty($this->items)) : ?>
+				<?php foreach ($this->items as $i => $row) :  ?>
 
 					<tr>
 						<td>
