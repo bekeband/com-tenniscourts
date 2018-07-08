@@ -61,7 +61,7 @@ $listDirn      = $this->escape($this->filter_order_Dir);
 			</tr>
 		</tfoot>
 		<tbody>
-			<?php if (!empty($this->items)) : ?>
+			<?php var_dump($this); if (!empty($this->items)) : ?>
 				<?php foreach ($this->items as $i => $row) :
 					$link = JRoute::_('index.php?option=com_tenniscourt&task=tenniscourt.edit&id=' . $row->id);
 				?>

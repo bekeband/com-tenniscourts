@@ -27,7 +27,9 @@ class TennisCourtViewTennisCourt extends JViewLegacy
     {
         // Assign data to the view
         $this->msg = $this->get('Msg');
-
+        $this->items			= $this->get('Items');
+        var_dump($this->items);
+        
         // Check for errors.
         if (count($errors = $this->get('Errors')))
         {
@@ -39,4 +41,5 @@ class TennisCourtViewTennisCourt extends JViewLegacy
         // Display the view
         parent::display($tpl);
     }
+    
 }

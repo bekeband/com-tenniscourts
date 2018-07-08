@@ -37,7 +37,16 @@ defined('_JEXEC') or die('Restricted Access');
 			</tr>
 		</tfoot>
 		<tbody>
-			<?php /* var_dump($this->items); */ if (!empty($this->items)) : ?>
+		<?php 
+		$model = $this->getModel();
+		$courts = $model->getCourtsNumber(1);
+//		var_dump($model);
+//		JTable::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_recipes/tables');
+//        $row = JTable::getInstance('recipes', 'Table', array());
+//        var_dump($row);
+        ?>
+
+			<?php if (!empty($this->items)) : ?>
 				<?php foreach ($this->items as $i => $row) :  ?>
 
 					<tr>

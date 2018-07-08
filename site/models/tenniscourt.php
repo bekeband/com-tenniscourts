@@ -33,8 +33,14 @@ class TennisCourtModelTennisCourt extends JModelItem
      */
     public function getTable($type = 'TennisCourt', $prefix = 'TennisCourtTable', $config = array())
     {
-        var_dump($type);
         return JTable::getInstance($type, $prefix, $config);
+    }
+    
+    public function getCourtsNumber($id)
+    {
+        $table = $this->getTable();
+        $retval = $table->load($id);
+        return $table->title;
     }
     
     /**
