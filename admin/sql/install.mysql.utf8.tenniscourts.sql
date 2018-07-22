@@ -1,37 +1,4 @@
-
-/* -------------------------- TENNIS_TARRIFF TABLE ------------------------------- */
-
-DROP TABLE IF EXISTS `#__TENNIS_RESERVE`;
-
-CREATE TABLE `#__TENNIS_RESERVE` (
-	`userid` int(11) NOT NULL,
-  `begin_date` date NOT NULL,
-  `end_date` date NOT NULL,
-  `id` varchar(12) NULL AUTO_INCREMENT
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-ALTER TABLE `#__TENNIS_RESERVE`
-  ADD PRIMARY KEY (`id`);
-
-/* -------------------------- TENNIS_TARRIFF TABLE ------------------------------- */
-
-DROP TABLE IF EXISTS `#__TENNIS_TARIFF`;
-
-CREATE TABLE `#__TENNIS_TARIFF` (
-  `id` varchar(12) NULL AUTO_INCREMENT,
-  `name` varchar(20) NOT NULL,
-  `pr_per_hour` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-
-INSERT INTO `#__TENNIS_TARIFF` (`name`, `pr_per_hour`) VALUES
-('BASE', 2000),
-('BASE_DISCOUNT', 1600),
-('BASE_INDOOR', 4000),
-('BASE_INDOOR_DISCOUNT', 3200);
-
-ALTER TABLE `#__TENNIS_TARIFF`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);*/
 
 /* -------------------------- END TENNIS_TARRIFF TABLE -------------------------------*/
 
