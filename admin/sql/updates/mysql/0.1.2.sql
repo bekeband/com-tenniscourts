@@ -1,22 +1,16 @@
 
 /* -------------------------- TENNIS_TARRIFF TABLE ------------------------------- */
 
-DROP TABLE IF EXISTS `#__TENNIS_MENU_OPTIONS`;
+DROP TABLE IF EXISTS `#__TENNIS_RESERVE`;
 
-CREATE TABLE `#__TENNIS_MENU_OPTIONS` (
-  `title` varchar(30) NOT NULL,
-  `feature` varchar(30) NOT NULL,
+CREATE TABLE `#__TENNIS_RESERVE` (
+	`userid` int(11) NOT NULL,
+  `begin_date` date NOT NULL,
+  `end_date` date NOT NULL,
   `id` varchar(12) NULL AUTO_INCREMENT
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
-INSERT INTO `#__TENNIS_MENU_OPTIONS` (`title`, `feature`, `id`) VALUES
-('OPTIONS 1 TITLE', 'OPTIONS 1 FEATURE', '1'),
-('OPTIONS 2 TITLE', 'OPTIONS 2 FEATURE', '2'),
-('OPTIONS 3 TITLE', 'OPTIONS 3 FEATURE', '3'),
-('OPTIONS 4 TITLE', 'OPTIONS 4 FEATURE', '4');
-
-ALTER TABLE `#__TENNIS_MENU_OPTIONS`
+ALTER TABLE `#__TENNIS_RESERVE`
   ADD PRIMARY KEY (`id`);
 
 /* -------------------------- TENNIS_TARRIFF TABLE ------------------------------- */

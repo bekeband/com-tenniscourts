@@ -1,13 +1,13 @@
 
-/* -------------------------- TENNIS_TARRIFF TABLE ------------------------------- */
+/* -------------------------- TENNIS_RESERVE TABLE ------------------------------- */
 
 DROP TABLE IF EXISTS `#__TENNIS_RESERVE`;
 
 CREATE TABLE `#__TENNIS_RESERVE` (
+	`id`	int	NOT NULL,
 	`userid` int(11) NOT NULL,
-  `begin_date` date NOT NULL,
-  `end_date` date NOT NULL,
-  `id` varchar(12) NULL AUTO_INCREMENT
+	`begin_date` date NOT NULL,
+	`end_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 ALTER TABLE `#__TENNIS_RESERVE`

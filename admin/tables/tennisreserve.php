@@ -18,6 +18,6 @@ class TennisTimesTableTennisTimes extends JTable
      */
     function __construct(&$db)
     {
-        parent::__construct('#__TENNIS_TIMES', 'ID', $db);
+        parent::__construct('#__TENNIS_RESERVE', 'ID', $db);
     }
 }
