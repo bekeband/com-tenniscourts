@@ -15,5 +15,20 @@ defined('_JEXEC') or die('Restricted access');
  */
 class TennisCourtController extends JControllerLegacy
 {
+    /**
+     * The default view for the display method.
+     *
+     * @var string
+     * @since 12.2
+     */
+    protected $default_view = 'TennisCourts';
 }
 
+/**
+ * Tenniscourt Component Controller
+ *
+ * @since  0.0.1
+ */
+class CourtsResController extends JControllerLegacy
+{
+}

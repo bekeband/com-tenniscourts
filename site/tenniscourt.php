@@ -11,6 +11,7 @@ defined('_JEXEC') or die('Restricted access');
 
 // Get an instance of the controller prefixed by TennisCourt
 $controller = JControllerLegacy::getInstance('TennisCourt');
+//$controller = JControllerLegacy::getInstance('CourtsRes');
 
 // Perform the Request task
 $input = JFactory::getApplication()->input;

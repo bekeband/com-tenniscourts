@@ -39,13 +39,18 @@ defined('_JEXEC') or die('Restricted Access');
 		<tbody>
 		<?php 
 		$model = $this->getModel();
-		$courts = $model->getCourtsNumber(1);
 
-//		var_dump($model);
-//		JTable::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_recipes/tables');
-//        $row = JTable::getInstance('recipes', 'Table', array());
-//        var_dump($row);
-
+		$table = $model->getTable();
+		
+		$rows = $table->load();
+		
+		var_dump($rows->id);
+		
+		JTable::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_tenniscourt/tables');
+        $row = JTable::getInstance('TennisCourt', 'Table', array());
+        var_dump($row);
+        
+//        throw new Exception(var_dump($row), 404);
         ?>
 
 			<?php if (!empty($this->items)) : ?>
