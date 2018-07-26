@@ -14,18 +14,18 @@ defined('_JEXEC') or die('Restricted Access');
 	<table class="table table-striped table-hover">
 		<thead>
 		<tr>
-			<th width="1%"><?php echo JText::_('COM_TENNISCOURT_NUM'); ?></th>
+			<th width="1%"><?php echo JText::_('COM_TENNISCOURT_ID'); ?></th>
 			<th width="2%">
-				<?php echo JHtml::_('grid.checkall'); ?>
+				<?php echo JText::_('COM_TENNISCOURT_NAME') ;// JHtml::_('grid.checkall'); ?>
 			</th>
 			<th width="90%">
-				<?php echo JText::_('COM_TENNISCOURT_NAME') ;?>
+				<?php echo JText::_('COM_TENNISCOURT_TITLE') ;?>
 			</th>
 			<th width="5%">
-				<?php echo JText::_('COM_TENNISCOURT_PUBLISHED'); ?>
+				<?php echo JText::_('COM_TENNISCOURT_FEATURE'); ?>
 			</th>
 			<th width="2%">
-				<?php echo JText::_('COM_TENNISCOURT_ID'); ?>
+				<?php echo JText::_('COM_TENNISCOURT_ISOPEN'); ?>
 			</th>
 		</tr>
 		</thead>
@@ -44,37 +44,40 @@ defined('_JEXEC') or die('Restricted Access');
 		
 		$rows = $table->load();
 		
-		var_dump($rows->id);
+//		var_dump($this->id);
+		echo JPATH_ADMINISTRATOR . '/components/com_tenniscourt/tables';
 		
 		JTable::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_tenniscourt/tables');
-        $row = JTable::getInstance('TennisCourt', 'Table', array());
-        var_dump($row);
+		
+        $row = JTable::getInstance('TennisCourt', 'TennisCourtTable', array());
+        $row->load(1);
+//        var_dump($row);
         
 //        throw new Exception(var_dump($row), 404);
         ?>
 
-			<?php if (!empty($this->items)) : ?>
-				<?php foreach ($this->items as $i => $row) :  ?>
+			<?php // if (!empty($this->items)) : ?>
+				<?php $i = 1; do { ?>
 
 					<tr>
 						<td>
-							<?php echo $this->pagination->getRowOffset($i); ?>
-						</td>
-						<td>
-							<?php echo JHtml::_('grid.id', $i, $row->id); ?>
-						</td>
-						<td>
-							<?php echo $row->greeting; ?>
-						</td>
-						<td align="center">
-							<?php echo JHtml::_('jgrid.published', $row->published, $i, 'tenniscourts.', true, 'cb'); ?>
-						</td>
-						<td align="center">
 							<?php echo $row->id; ?>
 						</td>
+						<td>
+							<?php echo $row->name; // JHtml::_('grid.id', $i, $row->id); ?>
+						</td>
+						<td>
+							<?php echo $row->title; ?>
+						</td>
+						<td align="center">
+							<?php echo $row->features; // JHtml::_('jgrid.published', $row->published, $i, 'tenniscourts.', true, 'cb'); ?>
+						</td>
+						<td align="center">
+							<?php echo $row->open; // $row->id; ?>
+						</td>
 					</tr>
-				<?php endforeach; ?>
-			<?php endif; ?>
+				<?php $i++; } while ($row->load($i)); ?>
+			<?php // endif; ?>
 		</tbody>
 	</table>
 </form>
