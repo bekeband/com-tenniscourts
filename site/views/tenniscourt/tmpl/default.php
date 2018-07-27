@@ -41,7 +41,7 @@ defined('_JEXEC') or die('Restricted Access');
 		$model = $this->getModel();
 
 		$table = $model->getTable();
-		
+		$count = $table->getrownumb();
 		$rows = $table->load();
 		
 //		var_dump($this->id);
@@ -50,14 +50,17 @@ defined('_JEXEC') or die('Restricted Access');
 		JTable::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_tenniscourt/tables');
 		
         $row = JTable::getInstance('TennisCourt', 'TennisCourtTable', array());
-        $row->load(1);
-//        var_dump($row);
-        
-//        throw new Exception(var_dump($row), 404);
+//        $row->load(1);
+/*        var_dump($row);
+
+        for ($i = 1; $i <= 10; $i++) {
+    echo $i;
+}
+        throw new Exception(var_dump($row), 404);*/
         ?>
 
 			<?php // if (!empty($this->items)) : ?>
-				<?php $i = 1; do { ?>
+				<?php for ($i = 1; $i <= $count; $i++) {?>
 
 					<tr>
 						<td>
@@ -76,7 +79,7 @@ defined('_JEXEC') or die('Restricted Access');
 							<?php echo $row->open; // $row->id; ?>
 						</td>
 					</tr>
-				<?php $i++; } while ($row->load($i)); ?>
+				<?php }; ?>
 			<?php // endif; ?>
 		</tbody>
 	</table>

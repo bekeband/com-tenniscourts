@@ -10,7 +10,6 @@ defined('_JEXEC') or die('Restricted access');
  * @since  0.0.1
  */
 class TennisCourtTableTennisCourt extends JTable
-//class TableTennisCourt extends JTable
 {
     /**
      * Constructor
@@ -20,6 +19,17 @@ class TennisCourtTableTennisCourt extends JTable
     function __construct(&$db)
     {
         parent::__construct('#__TENNIS_COURTS', 'id', $db);
+    }
+    
+    function getrownumb()
+    {
+        $db = JFactory::getDbo();
+        $user = JFactory::getUser();
+        $query = $db->getQuery(true);
+        $query->select('COUNT(*)')->from('#__TENNIS_COURTS');
+        $db->setQuery($query);
+        $count = $db->loadResult();
+        return $count;
     }
     
     public function bind($array, $ignore = '')
