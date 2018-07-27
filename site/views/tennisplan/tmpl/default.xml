@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_TENNISCOURT_TENNISPLAN_DEFAULT_TITLE">
+		<message>COM_TENNISCOURT_TENNISPLAN_DESC</message>
+	</layout>
+	<fields
+			name="request"
+			addfieldpath="/administrator/components/com_tenniscourt/models/fields"
+			>
+		<fieldset name="request">
+			<field
+					name="id"
+					type="TennisPlan"
+					label="COM_TENNISCOURT_TENNISPLAN"
+					description="COM_TENNISCOURT_TENNISPLAN_DESC"
+					/>
+		</fieldset>
+	</fields>
+</metadata>
