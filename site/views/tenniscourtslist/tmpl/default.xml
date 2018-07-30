@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_TENNISCOURT_TENNISCOURT_VIEW_DEFAULT_TITLE">
+		<message>COM_TENNISCOURT_TENNISCOURT_VIEW_LIST_ALL_COURTS_DESC</message>
+	</layout>
+	<fields
+			name="request"
+			addfieldpath="/administrator/components/com_tenniscourt/models/fields"
+			>
+		<fieldset name="request">
+			<field
+					name="id"
+					type="TennisCourt"
+					label="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_LABEL"
+					description="COM_TENNISCOURT_TENNISCOURT_FIELD_GREETING_DESC"
+					/>
+		</fieldset>
+	</fields>
+</metadata>
