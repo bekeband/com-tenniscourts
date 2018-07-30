@@ -10,7 +10,7 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted Access');
 ?>
-<form action="index.php?option=com_tenniscourt&view=tenniscourts" method="post" id="adminForm" name="adminForm">
+<form action="index.php?option=com_tenniscourt&view=tenniscourtslist" method="post" id="adminForm" name="adminForm">
 	<table class="table table-striped table-hover">
 		<thead>
 		<tr>
@@ -39,17 +39,17 @@ defined('_JEXEC') or die('Restricted Access');
 		<tbody>
 		<?php 
 		$model = $this->getModel();
-
-		$table = $model->getTable();
-		$count = $table->getrownumb();
-		$rows = $table->load();
+		var_dump($model);
+//		$table = $model->getTable();
+//		$count = $table->getrownumb();
+//		$rows = $table->load();
 		
 //		var_dump($this->id);
 //		echo JPATH_ADMINISTRATOR . '/components/com_tenniscourt/tables';
 		
-		JTable::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_tenniscourt/tables');
+//		JTable::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_tenniscourt/tables');
 		
-        $row = JTable::getInstance('TennisCourt', 'TennisCourtTable', array());
+//        $row = JTable::getInstance('TennisCourt', 'TennisCourtTable', array());
 //        $row->load(1);
 /*        var_dump($row);
 

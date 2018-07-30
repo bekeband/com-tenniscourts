@@ -1,7 +1,7 @@
 <?php
-/**
- *  Tenniscourt
- *  A php file for displaying the view
+/*
+    * A simple php for viewing the tenniscourts list 
+    * 
  */
 
 // No direct access to this file
@@ -9,14 +9,14 @@ defined('_JEXEC') or die('Restricted access');
 
 
 /**
- * HTML View class for the TennisCourt Component
+ * HTML View class for the TennisCourt component
  *
  * @since  0.0.1
  */
-class TennisCourtViewTennisCourt extends JViewLegacy
+class TennisCourtViewTennisCourtsList extends JViewLegacy
 {
     /**
-     * Display the TennisCourt
+     * Display the TennisCourts list 
      *
      * @param   string  $tpl  The name of the template file to parse; automatically searches 
      * through the template paths.

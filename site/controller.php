@@ -29,6 +29,12 @@ class TennisCourtController extends JControllerLegacy
  *
  * @since  0.0.1
  */
+
+/**
+ * Tenniscourt Component Controller
+ *
+ * @since  0.0.1
+ */
 class CourtsResController extends JControllerLegacy
 {
 }
