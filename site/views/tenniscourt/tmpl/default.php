@@ -41,10 +41,12 @@ defined('_JEXEC') or die('Restricted Access');
 		$model = $this->getModel();
 
 		$table = $model->getTable();
+		$keys = $table->getNextOrder();
+		var_dump($keys);
+		
 		$count = $table->getrownumb();
 		$rows = $table->load();
 		
-//		var_dump($this->id);
 		echo JPATH_ADMINISTRATOR . '/components/com_tenniscourt/tables';
 		
 		JTable::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_tenniscourt/tables');
