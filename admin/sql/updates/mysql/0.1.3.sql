@@ -9,6 +9,7 @@ CREATE TABLE `#__TENNIS_RESERVE` (
 	`userid` int NOT NULL,
 	`begin_date` date NOT NULL,
 	`end_date` date NOT NULL,
+	`court_id` int not null,
 	 PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
