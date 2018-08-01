@@ -14,7 +14,7 @@ CREATE TABLE `#__tennis_reserve` (
 	 PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `#__tennis_reserve` (`userid`, `reserve_date`, `begin_date`, `end_date`, `court_id`) VALUES
+INSERT INTO `#__tennis_reserve` (`userid`, `begin_date`, `end_date`, `court_id`) VALUES
 (51, 	'2018-07-16 04:12:09', '2018-08-02 08:00:00', '2018-08-02 09:00:00', 2),
 (2, 	'2018-07-21 11:00:19', '2018-08-02 07:00:00', '2018-08-02 08:00:00', 3),
 (11, 	'2018-07-27 09:09:09', '2018-08-03 06:00:00', '2018-08-03 07:00:00', 1),

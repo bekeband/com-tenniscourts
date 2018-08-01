@@ -5,11 +5,11 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * TennisTimes table class
+ * TennisReserve table class
  * 
  * @since  0.0.1
  */
-class TennisTimesTableTennisTimes extends JTable
+class TennisCourtTableTennisReserve extends JTable
 {
     /**
      * Constructor
@@ -18,6 +18,6 @@ class TennisTimesTableTennisTimes extends JTable
      */
     function __construct(&$db)
     {
-        parent::__construct('#__TENNIS_RESERVE', 'ID', $db);
+        parent::__construct('#__tennis_reserve', 'id', $db);
     }
 }
