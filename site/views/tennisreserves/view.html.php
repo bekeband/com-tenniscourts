@@ -6,6 +6,7 @@
 
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
+$this->addModelPath(JPATH_COMPONENT_ADMINISTRATOR.'/models');
 
 
 /**
@@ -13,7 +14,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.1
  */
-class TennisCourtViewTennisCourtsList extends JViewLegacy
+class TennisCourtViewTennisReserves extends JViewLegacy
 {
     /**
      * Display the TennisCourts list 
@@ -25,11 +26,8 @@ class TennisCourtViewTennisCourtsList extends JViewLegacy
      */
     function display($tpl = null)
     {
-        // Assign data to the view
-        $this->msg = $this->get('Msg');
+
         $this->items			= $this->get('Items');
-//        var_dump($this);
-//        throw new Exception('$this->items			= $this->get(\'Items\');', 500);
         
         // Check for errors.
         if (count($errors = $this->get('Errors')))

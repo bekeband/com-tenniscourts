@@ -10,22 +10,28 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted Access');
 ?>
-<form action="index.php?option=com_tenniscourt&view=tenniscourts" method="post" id="adminForm" name="adminForm">
+<form action="index.php?option=com_tenniscourt&view=tennisreserves" method="post" id="adminForm" name="adminForm">
 	<table class="table table-striped table-hover">
 		<thead>
 		<tr>
-			<th width="1%"><?php echo JText::_('COM_TENNISCOURT_ID'); ?></th>
+			<th width="1%"><?php echo JText::_('COM_TENNISRESERVE_ID'); ?></th>
 			<th width="2%">
-				<?php echo JText::_('COM_TENNISCOURT_NAME') ;// JHtml::_('grid.checkall'); ?>
-			</th>
-			<th width="90%">
-				<?php echo JText::_('COM_TENNISCOURT_TITLE') ;?>
+				<?php echo JText::_('COM_TENNISRESERVE_USER') ;// JHtml::_('grid.checkall'); ?>
 			</th>
 			<th width="5%">
-				<?php echo JText::_('COM_TENNISCOURT_FEATURE'); ?>
+				<?php echo JText::_('COM_TENNISRESERVE_BEGIN_DATE') ;?>
 			</th>
-			<th width="2%">
-				<?php echo JText::_('COM_TENNISCOURT_ISOPEN'); ?>
+			<th width="5%">
+				<?php echo JText::_('COM_TENNISRESERVE_END_DATE'); ?>
+			</th>
+			<th width="5%">
+				<?php echo JText::_('COM_TENNISRESERVE_BOOKING_DATE'); ?>
+			</th>
+			<th width="5%">
+				<?php echo JText::_('COM_TENNISRESERVE_COURT_NUMBER'); ?>
+			</th>
+			<th width="5%">
+				<?php echo JText::_("USERNAME"); ?>
 			</th>
 		</tr>
 		</thead>
@@ -38,11 +44,12 @@ defined('_JEXEC') or die('Restricted Access');
 		</tfoot>
 		<tbody>
 		<?php 
-
-		
+		JTable::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_tenniscourt/models');
+		$model = $this->getModel();
 //		var_dump($this->get('Items'));
 //		$table = $model->getTable();
-
+//		$query = $model->getVerboseQuery();
+		
 //		$count = $table->getrownumb();
 //		$rows = $table->load();
 		
@@ -59,6 +66,7 @@ defined('_JEXEC') or die('Restricted Access');
     echo $i;
 }
         throw new Exception(var_dump($row), 404);*/
+
         ?>
 
 			<?php if (!empty($this->items)) : ?>
@@ -70,16 +78,22 @@ defined('_JEXEC') or die('Restricted Access');
 							<?php echo $row->id; ?>
 						</td>
 						<td>
-							<?php echo $row->name; // JHtml::_('grid.id', $i, $row->id); ?>
+							<?php echo $row->userid; ?>
 						</td>
 						<td>
-							<?php echo $row->title; ?>
+							<?php echo $row->begin_date; ?>
 						</td>
 						<td align="center">
-							<?php echo $row->features; // JHtml::_('jgrid.published', $row->published, $i, 'tenniscourts.', true, 'cb'); ?>
+							<?php echo $row->end_date; ?>
 						</td>
 						<td align="center">
-							<?php echo $row->open; // $row->id; ?>
+							<?php echo $row->reserve_date; ?>
+						</td>
+						<td align="center">
+							<?php echo $row->court_id; ?>
+						</td>
+						<td align="center">
+							<?php echo $model->user_name; ?>
 						</td>
 					</tr>
 				<?php endforeach; ?>

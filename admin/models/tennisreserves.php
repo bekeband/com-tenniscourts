@@ -8,11 +8,11 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * TennisCourtList Model
+ * TennisReserveList Model
  *
  * @since  0.0.1
  */
-class TennisCourtModelTennisCourtsList extends JModelList
+class TennisCourtModelTennisReserves extends JModelList
 {
 	/**
 	 * Constructor.
@@ -24,39 +24,54 @@ class TennisCourtModelTennisCourtsList extends JModelList
 	 */
 	public function __construct($config = array())
 	{
-
 		if (empty($config['filter_fields']))
 		{
 			$config['filter_fields'] = array(
 			    'id',
-				'name',
-				'posx',
-				'posy',
-			    'title',
-			    'features',
-			    'open'
+				'user_id',
+				'reserve_date',
+				'begin_date',
+			    'end_date',
+			    'court_id'
 			);
 		}
 
 		parent::__construct($config);
 	}
 
+	public $user_name;
+	
+	protected function getListQuery()
+	{    
+	    $db    = JFactory::getDbo();
+	    
+	    $query = $db->getQuery(true);
+	    
+	    $query->select($db->quoteName(array('id', 'userid', 'reserve_date', 'begin_date', 'end_date', 'court_id')));
+	    
+	    $query->from($db->quoteName('#__tennis_reserve'));
+	    
+//	    var_dump(query);
+	    
+	    return $query;
+	}
+	
 	/**
 	 * Method to build an SQL query to load the list data.
 	 *
 	 * @return      string  An SQL query
 	 */
-	protected function getListQuery()
+	protected function getVerboseQuery()
 	{
 
 		// Initialize variables.
 		$db    = JFactory::getDbo();
-//		$TTable = TennisCourtTableTennisCourt($db);
+		
 		$query = $db->getQuery(true);
 
-		// Create the base select statement.
-		$query->select('*')
-			  ->from($db->quoteName('#__TENNIS_COURTS'));
+		$query->select($db->quoteName(array('id', 'userid', 'reserve_date', 'begin_date', 'end_date', 'court_id')));
+
+		$query->from($db->quoteName('#__tennis_reserve'));
 
 		// Filter: like / search
 		$search = $this->getState('filter.search');
@@ -64,40 +79,18 @@ class TennisCourtModelTennisCourtsList extends JModelList
 		if (!empty($search))
 		{
 			$like = $db->quote('%' . $search . '%');
-			$query->where('name LIKE ' . $like);
+			$query->where('user_id LIKE ' . $like);
 		}
 		
 		// Filter by opened state
 		$opened = $this->getState('filter.open');
-		
-		
-		if (is_numeric($opened))
-		{
-		    $query->where('open = ' . (int) $opened);
-		}
-		elseif ($opened === '')
-		{
-		    $query->where('(open IN (0, 1))');
-		}
-		
-		// Filter by published state
-/*		$opened = $this->getState('filter.open');
-
-		if (is_numeric($opened))
-		{
-			$query->where('open = ' . (int) $opened);
-		}
-		elseif ($opened === '')
-		{
-			$query->where('(open IN (0, 1))');
-		}*/
-
+				
 		// Add the list ordering clause.
-		$orderCol	= $this->state->get('list.ordering', 'name');
+		$orderCol	= $this->state->get('list.ordering', 'reserve_date');
 		$orderDirn 	= $this->state->get('list.direction', 'asc');
 
 		$query->order($db->escape($orderCol) . ' ' . $db->escape($orderDirn));
-
+        
 		return $query;
 	}
 }

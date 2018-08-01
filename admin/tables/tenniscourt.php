@@ -20,18 +20,7 @@ class TennisCourtTableTennisCourt extends JTable
     {
         parent::__construct('#__TENNIS_COURTS', 'id', $db);
     }
-    
-    function getrownumb()
-    {
-        $db = JFactory::getDbo();
-        $user = JFactory::getUser();
-        $query = $db->getQuery(true);
-        $query->select('COUNT(*)')->from('#__TENNIS_COURTS');
-        $db->setQuery($query);
-        $count = $db->loadResult();
-        return $count;
-    }
-    
+        
     public function bind($array, $ignore = '')
     {
         if (!isset($array['open']))
