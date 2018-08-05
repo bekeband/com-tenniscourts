@@ -93,5 +93,15 @@ INSERT INTO `#__tennis_courts` (`id`, `name`, `posx`, `posy`, `title`, `features
 (4, '21', 2, 1, 'Right behind the center court.', 'PRACTICE_DOUBLE', 1),
 (5, '31', 3, 1, 'Only single practice court.', 'PRACTICE_SINGLE', 1);
 
+INSERT INTO `#__users` ( `name`, `username`, `password`, `sendEmail`, `id` )
+VALUES( 'Tennis Player 01', 'tp01', md5('tp01'), 'tp01@tenisz.hu', 51);
+
+/*INSERT INTO jos_core_acl_aro( `section_value`, `value` )
+VALUES ( 'users', LAST_INSERT_ID() );
+
+INSERT INTO jos_core_acl_groups_aro_map( `group_id`, `aro_id` )
+VALUES ( 18, LAST_INSERT_ID() );*/
+
+
 /* -------------------------- END TENNIS_COURTS TABLE -------------------------------*/
 
