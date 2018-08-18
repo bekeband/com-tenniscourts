@@ -24,7 +24,7 @@ class TennisCourtModelTennisReserves extends JModelList
 	 */
 	public function __construct($config = array())
 	{
-		if (empty($config['filter_fields']))
+/*		if (empty($config['filter_fields']))
 		{
 			$config['filter_fields'] = array(
 			    'id',
@@ -34,7 +34,7 @@ class TennisCourtModelTennisReserves extends JModelList
 			    'end_date',
 			    'court_id'
 			);
-		}
+		}*/
 
 		parent::__construct($config);
 	}
@@ -47,9 +47,21 @@ class TennisCourtModelTennisReserves extends JModelList
 	    
 	    $query = $db->getQuery(true);
 	    
-	    $query->select($db->quoteName(array('id', 'userid', 'reserve_date', 'begin_date', 'end_date', 'court_id')));
+	    $query
+	    ->select(array('a.*', 'b.username', 'b.name'))
+	    ->from($db->quoteName('#__tennis_reserve', 'a'))
+	    ->join('INNER', $db->quoteName('#__users', 'b') . ' ON (' . $db->quoteName('a.userid') . ' = ' . $db->quoteName('b.id') . ')');
+/*	    $query->select($db->quoteName(array('id', 'userid', 'reserve_date', 'begin_date', 'end_date', 'court_id')));
 	    
-	    $query->from($db->quoteName('#__tennis_reserve'));
+	    $query->from($db->quoteName('#__tennis_reserve'));*/
+	    
+/*	    $query
+	    ->select(array('a.*', 'b.username', 'b.name'))
+	    ->from($db->quoteName('#__content', 'a'))
+	    ->join('INNER', $db->quoteName('#__users', 'b') . ' ON (' . $db->quoteName('a.created_by') . ' = ' . $db->quoteName('b.id') . ')')
+	    ->where($db->quoteName('b.username') . ' LIKE \'a%\'')
+	    ->order($db->quoteName('a.created') . ' DESC');*/
+	    
 	    
 //	    var_dump(query);
 	    

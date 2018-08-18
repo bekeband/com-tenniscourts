@@ -93,7 +93,7 @@ defined('_JEXEC') or die('Restricted Access');
 							<?php echo $row->court_id; ?>
 						</td>
 						<td align="center">
-							<?php echo $model->user_name; ?>
+							<?php echo $row->name; ?>
 						</td>
 					</tr>
 				<?php endforeach; ?>

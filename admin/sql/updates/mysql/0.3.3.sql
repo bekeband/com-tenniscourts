@@ -94,7 +94,14 @@ INSERT INTO `#__tennis_courts` (`id`, `name`, `posx`, `posy`, `title`, `features
 (5, '31', 3, 1, 'Only single practice court.', 'PRACTICE_SINGLE', 1);
 
 INSERT INTO `#__users` ( `name`, `username`, `password`, `sendEmail`, `id` )
-VALUES( 'Tennis Player 01', 'tp01', md5('tp01'), 'tp01@tenisz.hu', 51);
+VALUES
+( 'Tennis Player 01', 'tp01', md5('tp01'), 'tp01@tenisz.hu', 51),
+( 'Tennis Player 02', 'tp02', md5('tp02'), 'tp02@tenisz.hu', 2),
+( 'Tennis Player 11', 'tp11', md5('tp11'), 'tp11@tenisz.hu', 11),
+( 'Tennis Player 09', 'tp09', md5('tp09'), 'tp09@tenisz.hu', 9),
+( 'Tennis Player 08', 'tp08', md5('tp08'), 'tp08@tenisz.hu', 8),
+( 'Tennis Player 05', 'tp05', md5('tp05'), 'tp05@tenisz.hu', 5),
+( 'Tennis Player 50', 'tp50', md5('tp50'), 'tp50@tenisz.hu', 50);
 
 /*INSERT INTO jos_core_acl_aro( `section_value`, `value` )
 VALUES ( 'users', LAST_INSERT_ID() );
