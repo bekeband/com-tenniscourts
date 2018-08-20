@@ -15,11 +15,7 @@ defined('_JEXEC') or die('Restricted access');
  */
 class TennisCourtModelTennisPlan extends JModelItem
 {
-    /**
-     * @var array messages
-     */
-    protected $messages;
-    
+
     /**
      * Method to get a table object, load it if necessary.
      *
@@ -36,47 +32,22 @@ class TennisCourtModelTennisPlan extends JModelItem
         return JTable::getInstance($type, $prefix, $config);
     }
     
-    
-    
-    public function getCourtsNumber($id)
+    protected function getListQuery()
     {
-        $table = $this->getTable();
-        $retval = $table->load($id);
-        return $table->title;
-    }
-    
-    /**
-     * Get the message
-     *
-     * @param   integer  $id  Greeting Id
-     *
-     * @return  string        Fetched String from Table for relevant Id
-     */
-    public function getMsg($id = 1)
-    {
-
-        if (!is_array($this->messages))
-        {
-            $this->messages = array();
-        }
-
-        if (!isset($this->messages[$id]))
-        {
-            // Request the selected id
-            $jinput = JFactory::getApplication()->input;
-
-            $id     = $jinput->get('id', 1, 'INT');
-
-            // Get a TableHelloWorld instance
-            $table = $this->getTable();
-            // Load the message
-            $table->load($id);
-
-            // Assign the message
-            $this->messages[$id] = $table->id;
-
-        }
+        $db    = JFactory::getDbo();
         
-        return $this->messages[$id];
+        $query = $db->getQuery(true);
+        
+        $query
+        ->select(array('a.*', 'b.username', 'b.name'))
+        ->from($db->quoteName('#__tennis_reserve', 'a'))
+        ->join('INNER', $db->quoteName('#__users', 'b') . ' ON (' . $db->quoteName('a.userid') . ' = ' . $db->quoteName('b.id') . ')');
+        
+        
+        //	    var_dump(query);
+        
+        return $query;
     }
+    
+    
 }

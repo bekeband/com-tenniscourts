@@ -46,26 +46,6 @@ defined('_JEXEC') or die('Restricted Access');
 		<?php 
 		JTable::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_tenniscourt/models');
 		$model = $this->getModel();
-//		var_dump($this->get('Items'));
-//		$table = $model->getTable();
-//		$query = $model->getVerboseQuery();
-		
-//		$count = $table->getrownumb();
-//		$rows = $table->load();
-		
-//		var_dump($this->id);
-//		echo JPATH_ADMINISTRATOR . '/components/com_tenniscourt/tables';
-		
-//		JTable::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_tenniscourt/tables');
-		
-//        $row = JTable::getInstance('TennisCourt', 'TennisCourtTable', array());
-//        $row->load(1);
-/*        var_dump($row);
-
-        for ($i = 1; $i <= 10; $i++) {
-    echo $i;
-}
-        throw new Exception(var_dump($row), 404);*/
 
         ?>
 

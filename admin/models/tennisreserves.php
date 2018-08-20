@@ -38,8 +38,6 @@ class TennisCourtModelTennisReserves extends JModelList
 
 		parent::__construct($config);
 	}
-
-	public $user_name;
 	
 	protected function getListQuery()
 	{    
@@ -51,16 +49,6 @@ class TennisCourtModelTennisReserves extends JModelList
 	    ->select(array('a.*', 'b.username', 'b.name'))
 	    ->from($db->quoteName('#__tennis_reserve', 'a'))
 	    ->join('INNER', $db->quoteName('#__users', 'b') . ' ON (' . $db->quoteName('a.userid') . ' = ' . $db->quoteName('b.id') . ')');
-/*	    $query->select($db->quoteName(array('id', 'userid', 'reserve_date', 'begin_date', 'end_date', 'court_id')));
-	    
-	    $query->from($db->quoteName('#__tennis_reserve'));*/
-	    
-/*	    $query
-	    ->select(array('a.*', 'b.username', 'b.name'))
-	    ->from($db->quoteName('#__content', 'a'))
-	    ->join('INNER', $db->quoteName('#__users', 'b') . ' ON (' . $db->quoteName('a.created_by') . ' = ' . $db->quoteName('b.id') . ')')
-	    ->where($db->quoteName('b.username') . ' LIKE \'a%\'')
-	    ->order($db->quoteName('a.created') . ' DESC');*/
 	    
 	    
 //	    var_dump(query);
